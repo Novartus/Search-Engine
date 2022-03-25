@@ -27,4 +27,5 @@ jobs:
       with:
         distribution: 'adopt'
         java-version: 8
-    - run: java -cp java Hello
+    - run: javac Hello.java
+    - run: java Hello
