@@ -22,23 +22,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Setup JDK 8
-        uses: actions/setup-java@v2
+      - uses: actions/setup-java@v2
         with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '8'
-
-      - name: Build class files
-        run: javac Hello.java
-        
-      - name: Check Build Run Status
-        run: java Hello.java
-                  
-      # Runs a set of commands using the runners shell
-#      - name: Run a multi-line script
-#        run: |
-#          echo Add other actions to build,
-#          echo test, and deploy your project.
+      - run: java -cp java HelloWorldApp
