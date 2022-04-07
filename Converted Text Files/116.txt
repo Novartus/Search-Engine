@@ -1,0 +1,3 @@
+https://feeds.feedburner.com/javatpointsonoo
+Javatpoint
+Javatpoint www.javatpoint.com provides tutorials on core java, servlet, jsp, struts 2, spring, hibernate and android. http://www.javatpoint.com javatpointsonoohttps://feedburner.google.com Spring Tutorial Spring tutorial provides in-depth knowledge of Dependency Injection, Data access using JDBC and ORM, MVC, AOP, Remoting, Spring with OXM and Web Integration. http://www.javatpoint.com/spring-tutorial Hibernate Tutorial Hibernate tutorial provides in-depth knowledge of Inheritance mapping, Collection mapping, Association mapping, HQL, HCQL, Native Query and Hibernate Caching. http://www.javatpoint.com/hibernate-tutorial
