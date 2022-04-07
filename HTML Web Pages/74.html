@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Learn JavaScript Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Learn JavaScript Tutorial - javatpoint">
+  <meta property="og:description" content="Learn JavaScript tutorial for beginners and professionals covers fundamentals, uses of javascript, purpose of javascript, javascript validation, javascript dom objects, java objects, control statements and more."> 
+  <meta name="keywords" content="javascript, tutorial, beginners, professionals, advantages, features, examples, html, dom, css, tags, events, validation, object, loop, array, document">
+  <meta name="description" content="Learn JavaScript tutorial for beginners and professionals covers fundamentals, uses of javascript, purpose of javascript, javascript validation, javascript dom objects, java objects, control statements and more.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/javascript-tutorial"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Learn JavaScript Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Learn JavaScript tutorial for beginners and professionals covers fundamentals, uses of javascript, purpose of javascript, javascript validation, javascript dom objects, java objects, control statements and more.">
+  <meta property="og:url" content="https://www.javatpoint.com/javascript-tutorial">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/icon/home.png" alt="home"> Home</a></li> 
+       <li><a href="javascript-tutorial" class="selected"><img src="https://static.javatpoint.com/images/icon/js.png" alt="javascript"> JavaScript</a></li> 
+       <li><a href="html-tutorial"><img src="https://static.javatpoint.com/images/icon/html.png" alt="html"> HTML</a></li> 
+       <li><a href="css-tutorial"><img src="https://static.javatpoint.com/images/icon/css.png" alt="CSS"> CSS</a></li> 
+       <li><a href="bootstrap-tutorial"><img src="https://static.javatpoint.com/images/icon/bootstrap.png" alt="Bootstrap"> Bootstrap</a></li> 
+       <li><a href="jquery-tutorial"><img src="https://static.javatpoint.com/images/icon/jquery.png" alt="jQuery"> jQuery</a></li> 
+       <li><a href="nodejs-tutorial"><img src="https://static.javatpoint.com/images/icon/node-js.png" alt="Node.js"> Node.js</a></li> 
+       <li><a href="php-tutorial"><img src="https://static.javatpoint.com/images/icon/php.png" alt="php"> PHP</a></li> 
+       <li><a href="python-tutorial"><img src="https://static.javatpoint.com/images/icon/python.png" alt="python"> Python</a></li> 
+       <li><a href="c-programming-language-tutorial"><img src="https://static.javatpoint.com/images/icon/c.png" alt="c"> C</a></li> 
+       <li><a href="cpp-tutorial"><img src="https://static.javatpoint.com/images/icon/cpp.png" alt="c++"> C++</a></li> 
+       <li><a href="java-tutorial"><img src="https://static.javatpoint.com/images/icon/java.png" alt="java"> Java</a></li> 
+       <li><a href="c-sharp-tutorial"><img src="https://static.javatpoint.com/images/icon/csharp.png" alt="c#"> C#</a></li> 
+       <li><a href="sql-tutorial"><img src="https://static.javatpoint.com/images/icon/sql.png" alt="sql"> SQL</a></li> 
+       <li><a href="android-tutorial"><img src="https://static.javatpoint.com/images/icon/android.png" alt="android"> Android</a></li> 
+       <li><a href="javascript-interview-questions"><img src="https://static.javatpoint.com/images/icon/interview.png" alt="interview questions"> Interview Q</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-tutorial">JavaScript Introduction</a> <a href="javascript-example">JavaScript Example</a> <a href="external-javascript-file">External JavaScript</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript Basics</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-comment">JS Comment</a> <a href="javascript-variable">JS Variable</a> <a href="javascript-global-variable">JS Global Variable</a> <a href="javascript-data-types">JS Data Types</a> <a href="javascript-operators">JS Operators</a> <a href="javascript-if">JS If Statement</a> <a href="javascript-switch">JS Switch</a> <a href="javascript-loop">JS Loop</a> <a href="javascript-function">JS Function</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript Objects</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-objects">JS Object</a> <a href="javascript-array">JS Array</a> <a href="javascript-string">JS String</a> <a href="javascript-date">JS Date</a> <a href="javascript-math">JS Math</a> <a href="javascript-number">JS Number</a> <a href="javascript-boolean">JS Boolean</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript BOM</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="browser-object-model">Browser Objects</a> <a href="window-object">1) Window Object</a> <a href="javascript-history-object">2) History Object</a> <a href="javascript-navigator-object">3) Navigator Object</a> <a href="javascript-screen">4) Screen Object</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript DOM</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="document-object-model">5) Document Object</a> <a href="document-getElementById()-method">getElementById</a> <a href="javascript-getelementsbyclassname">GetElementsByClassName()</a> <a href="document-getElementsByName()-method">getElementsByName</a> <a href="document-getElementsByTagName()-method">getElementsByTagName</a> <a href="javascript-innerHTML">JS innerHTML property</a> <a href="javascript-innerText">JS innerText property</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript Validation</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-form-validation">JS form validation</a> <a href="javascript-form-validation#email">JS email validation</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript OOPs</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-oops-classes">JS Class</a> <a href="javascript-objects">JS Object</a> <a href="javascript-oops-prototype-object">JS Prototype</a> <a href="javascript-oops-constructor-method">JS constructor Method</a> <a href="javascript-oops-static-method">JS static Method</a> <a href="javascript-oops-encapsulation">JS Encapsulation</a> <a href="javascript-oops-inheritance">JS Inheritance</a> <a href="javascript-oops-polymorphism">JS Polymorphism</a> <a href="javascript-oops-abstraction">JS Abstraction</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript Cookies</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-cookies">JS Cookies</a> <a href="javascript-cookie-attributes">Cookie Attributes</a> <a href="javascript-cookie-with-multiple-name">Cookie with multiple Name</a> <a href="javascript-deleting-cookies">Deleting Cookies</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript Events</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-events">JavaScript Events</a> <a href="javascript-addeventlistener">JavaScript addEventListener()</a> <a href="javascript-onclick-event">JS onclick event</a> <a href="javascript-dblclick-event">JS dblclick event</a> <a href="javascript-onload">JS onload event</a> <a href="javascript-onresize-event">JS onresize event</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Exception Handling</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="exception-handling-in-javascript">JS Exception Handling</a> <a href="javascript-try-catch">JavaScript try-catch</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript Misc</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-this-keyword">JS this Keyword</a> <a href="javascript-debugging">JS Debugging</a> <a href="javascript-hoisting">JS Hoisting</a> <a href="javascript-strict-mode">JS Strict Mode</a> <a href="javascript-promise">JavaScript Promise</a> <a href="javascript-compare-dates">JS Compare dates</a> <a href="javascript-array-length-property">JavaScript array.length</a> <a href="javascript-alert">JavaScript alert()</a> <a href="javascript-eval-function">JavaScript eval() function</a> <a href="javascript-closest">JavaScript closest()</a> <a href="javascript-continue-statement">JavaScript continue statement</a> <a href="javascript-getattribute-method">JS getAttribute() method</a> <a href="javascript-hide-elements">JS hide elements</a> <a href="javascript-prompt-dialog-box">JavaScript prompt()</a> <a href="javascript-removeattribute-method">removeAttribute() method</a> <a href="javascript-reset">JavaScript reset</a> <a href="javascript-return">JavaScript return</a> <a href="javascript-string-split">JS String split()</a> <a href="javascript-typeof-operator">JS typeof operator</a> <a href="javascript-ternary-operator">JS ternary operator</a> <a href="javascript-reload-method">JS reload() method</a> <a href="javascript-setattribute">JS setAttribute() method</a> <a href="javascript-setinterval-method">JS setInterval() method</a> <a href="javascript-settimeout-method">JS setTimeout() method</a> <a href="javascript-string-includes">JS string includes() method</a> <a href="calculate-current-week-number-in-javascript">Calculate current week number in JavaScript</a> <a href="calculate-days-between-two-dates-in-javascript">Calculate days between two dates in JavaScript</a> <a href="javascript-string-trim">JavaScript String trim()</a> <a href="javascript-timer">JavaScript timer</a> <a href="remove-elements-from-array-in-javascript">Remove elements from array</a> <a href="javascript-localstorage">JavaScript localStorage</a> <a href="javascript-offsetheight">JavaScript offsetHeight</a> <a href="confirm-password-validation-in-javascript">Confirm password validation</a> <a href="static-vs-const-in-javascript">Static vs Const</a> <a href="how-to-convert-comma-separated-string-into-an-array-in-javascript">How to Convert Comma Separated String into an Array in JavaScript</a> <a href="calculate-age-using-javascript">Calculate age using JavaScript</a> <a href="javascript-label-statement">JavaScript label statement</a> <a href="javascript-string-with-quotes">JavaScript String with quotes</a> <a href="how-to-create-dropdown-list-using-javascript">How to create dropdown list using JavaScript</a> <a href="how-to-disable-radio-button-using-javascript">How to disable radio button using JavaScript</a> <a href="check-if-the-value-exists-in-array-in-javascript">Check if the value exists in Array in Javascript</a> <a href="javascript-setinterval">Javascript Setinterval</a> <a href="javascript-debouncing">JavaScript Debouncing</a> <a href="javascript-print-method">JavaScript print() method</a> <a href="javascript-editable-table">JavaScript editable table</a> <a href="canvasjs">CanvasJS</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">JavaScript Advance</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-typedarray">JS TypedArray</a> <a href="javascript-set">JS Set</a> <a href="javascript-map">JS Map</a> <a href="javascript-weakset">JS WeakSet</a> <a href="javascript-weakmap">JS WeakMap</a> <a href="javascript-callback">JavaScript callback</a> <a href="javascript-closures">JavaScript closures</a> <a href="javascript-date-difference">JavaScript date difference</a> <a href="javascript-date-format">JavaScript date format</a> <a href="javascript-date-parse-method">JS date parse() method</a> <a href="javascript-defer">JavaScript defer</a> <a href="javascript-redirect">JavaScript redirect</a> <a href="javascript-scope">JavaScript scope</a> <a href="javascript-scroll">JavaScript scroll</a> <a href="javascript-sleep">JavaScript sleep</a> <a href="javascript-void">JavaScript void</a> <a href="javascript-form">JavaScript Form</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Differences</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="jquery-vs-javascript">jQuery vs JavaScript</a> <a href="javascript-vs-php">JavaScript vs PHP</a> <a href="dart-vs-javascript">Dart vs. JavaScript</a> <a href="javascript-vs-angularjs">JavaScript Vs. Angular Js</a> <a href="javascript-vs-nodejs">JavaScript vs. Node.js</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Questions</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="how-to-add-javascript-to-html">How to add JavaScript to html</a> <a href="how-to-enable-javascript-in-my-browser">How to enable JavaScript in my browser</a> <a href="difference-between-java-and-javascript">difference between Java and JavaScript</a> <a href="how-to-call-javascript-function-in-html">How to call JavaScript function in html</a> <a href="how-to-write-a-function-in-javascript">How to write a function in JavaScript</a> <a href="is-javascript-case-sensitive">Is JavaScript case sensitive</a> <a href="how-does-javascript-work">How does JavaScript Work</a> <a href="how-to-debug-javascript">How to debug JavaScript</a> <a href="how-to-enable-javascript-on-android">How to Enable JavaScript on Android</a> <a href="what-is-a-promise-in-javascript">What is a promise in JavaScript</a> <a href="what-is-hoisting-in-javascript">What is hoisting in JavaScript</a> <a href="what-is-vanilla-javascript">What is Vanilla JavaScript</a> <a href="how-to-add-a-class-to-an-element-using-javascript">How to add a class to an element using JavaScript</a> <a href="how-to-calculate-the-perimeter-and-area-of-a-circle-using-javascript">How to calculate the perimeter and area of a circle using JavaScript</a> <a href="how-to-create-an-image-map-in-javascript">How to create an image map in JavaScript</a> <a href="how-to-find-factorial-of-a-number-in-javascript">How to find factorial of a number in JavaScript</a> <a href="how-to-get-the-value-of-pi-using-javascript">How to get the value of PI using JavaScript</a> <a href="how-to-make-a-text-italic-using-javascript">How to make a text italic using JavaScript</a> <a href="what-are-the-uses-of-javascript">What are the uses of JavaScript</a> <a href="how-to-get-all-checked-checkbox-value-in-javascript">How to get all checked checkbox value in JavaScript</a> <a href="how-to-open-json-file">How to open JSON file</a> <a href="random-image-generator-in-javascript">Random image generator in JavaScript</a> <a href="how-to-add-object-in-array-using-javascript">How to add object in array using JavaScript</a> <a href="javascript-window-open-method">JavaScript Window open method</a> <a href="javascript-window-close-method">JavaScript Window close method</a> <a href="how-to-check-a-radio-button-using-javascript">How to check a radio button using JavaScript</a> <a href="javascript-const">JavaScript Const</a> <a href="javascript-function-to-check-array-is-empty-or-not">JavaScript function to check array is empty or not</a> <a href="javascript-multi-line-string">JavaScript multi-line String</a> <a href="javascript-anonymous-functions">JavaScript Anonymous Functions</a> <a href="implementing-javascript-stack-using-array">Implementing JavaScript Stack Using Array</a> <a href="javascript-classlist">JavaScript classList</a> <a href="javascript-code-editors">JavaScript Code Editors</a> <a href="javascript-let-keyword">JavaScript let keyword</a> <a href="random-string-generator-using-javascript">Random String Generator using JavaScript</a> <a href="javascript-queue">JavaScript Queue</a> <a href="event-bubbling-and-capturing-in-javascript">Event Bubbling and Capturing in JavaScript</a> <a href="how-to-select-all-checkboxes-using-javascript">How to select all checkboxes using JavaScript</a> <a href="javascript-change-event">JavaScript change Event</a> <a href="javascript-focusout-event">JavaScript focusout event</a> <a href="traverse-array-object-using-javascript">Traverse array object using JavaScript</a> <a href="javascript-create-and-download-csv-file">JavaScript create and download CSV file</a> <a href="how-to-make-beep-sound-in-javascript">How to make beep sound in JavaScript</a> <a href="how-to-add-a-whatsapp-share-button-in-a-website-using-javascript">How to add a WhatsApp share button in a website using JavaScript</a> <a href="javascript-execution-context">JavaScript Execution Context</a> <a href="javascript-queryselector">JavaScript querySelector</a> <a href="shallow-copy-in-javascript">Shallow Copy in JavaScript</a> <a href="how-to-toggle-password-visibility-in-javascript">How to Toggle Password Visibility in JavaScript</a> <a href="removing-duplicate-from-arrays-in-javascript">Removing Duplicate From Arrays</a> <a href="javascript-insertbefore">JavaScript insertBefore</a> <a href="javascript-select-option">JavaScript Select Option</a> <a href="get-and-set-scroll-position-of-an-element">Get and Set Scroll Position of an Element</a> <a href="getting-child-elements-of-a-node-in-javascript">Getting Child Elements of a Node in JavaScript</a> <a href="javascript-scrollintoview">JavaScript scrollIntoView</a> <a href="javascript-string-startswith">JavaScript String startsWith</a> <a href="js-first-class-function">JS First Class Function</a> <a href="javascript-default-parameters">JavaScript Default Parameters</a> <a href="javascript-recursion-in-real-life">JavaScript Recursion in Real Life</a> <a href="javascript-removechild">JavaScript removeChild</a> <a href="remove-options-from-select-list-in-javascript">Remove options from select list in JavaScript</a> <a href="javascript-calculator">JavaScript Calculator</a> <a href="palindrome-in-javascript">Palindrome in JavaScript</a> <a href="javascript-call-stack">JavaScript Call Stack</a> <a href="fibonacci-series-in-javascript">Fibonacci series in JavaScript</a> <a href="javascript-appendchild-method">JavaScript appendchild() method</a> <a href="ripple-effect-javascript">Ripple effect JavaScript</a> <a href="convert-object-to-array-in-javascript">Convert object to array in Javascript</a> <a href="javascript-async-and-await">JavaScript Async/Await</a> <a href="javascript-blob">JavaScript Blob</a> <a href="check-if-the-array-is-empty-or-null-or-undefined-in-javascript">Check if the array is empty or null, or undefined in JavaScript</a> <a href="javascript-animation">JavaScript Animation</a> <a href="javascript-design-patterns">JavaScript Design Patterns</a> <a href="canvasjs">CanvasJS</a> <a href="javascript-format-numbers-with-commas">JavaScript format numbers with commas</a> <a href="currying-in-javascript">Currying in JavaScript</a> <a href="javascript-hasownproperty">JavaScript hasOwnProperty</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">MCQ</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-mcq">JavaScript MCQ</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Interview Questions</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="javascript-interview-questions">JavaScript I/Q</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="javascript-example">next &#x2192;</a> 
+           </div> <h1 class="h1">Learn JavaScript Tutorial</h1> <img src="https://static.javatpoint.com/images/javascript/javascript_logo.png" width="200" height="200" alt="JavaScript Tutorial" class="imageright"> <p>Our <strong>JavaScript Tutorial</strong> is designed for beginners and professionals both. JavaScript is used to create client-side dynamic pages. </p> <p>JavaScript is <em>an object-based scripting language</em> which is lightweight and cross-platform.</p> <p>JavaScript is not a compiled language, but it is a translated language. The JavaScript Translator (embedded in the browser) is responsible for translating the JavaScript code for the web browser.</p> <h2 class="h2">What is JavaScript</h2> <p>JavaScript (js) is a light-weight object-oriented programming language which is used by several websites for scripting the webpages. It is an interpreted, full-fledged programming language that enables dynamic interactivity on websites when applied to an HTML document. It was introduced in the year 1995 for adding programs to the webpages in the Netscape Navigator browser. Since then, it has been adopted by all other graphical web browsers. With JavaScript, users can build modern web applications to interact directly without reloading the page every time. The traditional website uses js to provide several forms of interactivity and simplicity.</p> <p>Although, JavaScript has no connectivity with Java programming language. The name was suggested and provided in the times when Java was gaining popularity in the market. In addition to web browsers, databases such as CouchDB and MongoDB uses JavaScript as their scripting and query language.</p> <h2 class="h2">Features of JavaScript</h2> <p>There are following features of JavaScript:</p> 
+           <ol class="points"> 
+            <li>All popular web browsers support JavaScript as they provide built-in execution environments.</li> 
+            <li>JavaScript follows the syntax and structure of the C programming language. Thus, it is a structured programming language.</li> 
+            <li>JavaScript is a weakly typed language, where certain types are implicitly cast (depending on the operation).</li> 
+            <li>JavaScript is an object-oriented programming language that uses prototypes rather than using classes for inheritance.</li> 
+            <li>It is a light-weighted and interpreted language.</li> 
+            <li>It is a case-sensitive language.</li> 
+            <li>JavaScript is supportable in several operating systems including, Windows, macOS, etc.</li> 
+            <li>It provides good control to the users over the web browsers.</li> 
+           </ol> <h2 class="h2">History of JavaScript</h2> <p>In 1993, <strong>Mosaic</strong>, the first popular web browser, came into existence. In the <strong>year 1994</strong>, <strong>Netscape</strong> was founded by <strong>Marc Andreessen</strong>. He realized that the web needed to become more dynamic. Thus, a 'glue language' was believed to be provided to HTML to make web designing easy for designers and part-time programmers. Consequently, in 1995, the company recruited <strong>Brendan Eich</strong> intending to implement and embed Scheme programming language to the browser. But, before Brendan could start, the company merged with <strong>Sun Microsystems</strong> for adding Java into its Navigator so that it could compete with Microsoft over the web technologies and platforms. Now, two languages were there: Java and the scripting language. Further, Netscape decided to give a similar name to the scripting language as Java's. It led to 'Javascript'. Finally, in May 1995, Marc Andreessen coined the first code of Javascript named '<strong>Mocha</strong>'. Later, the marketing team replaced the name with '<strong>LiveScript</strong>'. But, due to trademark reasons and certain other reasons, in December 1995, the language was finally renamed to 'JavaScript'. From then, JavaScript came into existence.</p> <h2 class="h2">Application of JavaScript</h2> <p>JavaScript is used to create interactive websites. It is mainly used for:</p> 
+           <ul class="points"> 
+            <li>Client-side validation,</li> 
+            <li>Dynamic drop-down menus,</li> 
+            <li>Displaying date and time,</li> 
+            <li>Displaying pop-up windows and dialog boxes (like an alert dialog box, confirm dialog box and prompt dialog box),</li> 
+            <li>Displaying clocks etc.</li> 
+           </ul> <h3 class="h2">JavaScript Example</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+&lt;script&gt;
+document.write("Hello JavaScript by JavaScript");
+&lt;/script&gt;
+</textarea>
+           </div> <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=hellojs" target="_blank">Test it Now</a></span> <p>A detailed explanation of first JavaScript example is given in next chapter.</p> 
+           <hr> <h2 class="h2 center textshadow">JavaScript Index</h2> 
+           <hr> 
+           <div class="responsivediv"> 
+            <div class="col-3"> 
+             <p><strong>JavaScript Tutorial</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-tutorial">JavaScript Introduction</a></li> 
+              <li><a href="javascript-example">JavaScript Example</a></li> 
+              <li><a href="external-javascript-file">External JavaScript</a></li> 
+             </ul> 
+             <p><strong>JavaScript Basics</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-comment">JavaScript Comment</a></li> 
+              <li><a href="javascript-variable">JavaScript Variable</a></li> 
+              <li><a href="javascript-global-variable">JavaScript Global Variable</a></li> 
+              <li><a href="javascript-data-types">JavaScript Data Types</a></li> 
+              <li><a href="javascript-operators">JavaScript Operators</a></li> 
+              <li><a href="javascript-if">JavaScript If Statement</a></li> 
+              <li><a href="javascript-switch">JavaScript Switch</a></li> 
+              <li><a href="javascript-loop">JavaScript Loop</a></li> 
+              <li><a href="javascript-function">JavaScript Function</a></li> 
+             </ul> 
+             <p><strong>JavaScript Objects</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-objects">JavaScript Object</a></li> 
+              <li><a href="javascript-array">JavaScript Array</a></li> 
+              <li><a href="javascript-string">JavaScript String</a></li> 
+              <li><a href="javascript-date">JavaScript Date</a></li> 
+              <li><a href="javascript-math">JavaScript Math</a></li> 
+              <li><a href="javascript-number">JavaScript Number</a></li> 
+              <li><a href="javascript-boolean">JavaScript Boolean</a></li> 
+              <li><a href="post/javascript-dataview">JavaScript DataView</a></li> 
+              <li><a href="javascript-function">JavaScript Function</a></li> 
+              <li><a href="javascript-handler">JavaScript handler</a></li> 
+              <li><a href="javascript-json">JavaScript JSON</a></li> 
+              <li><a href="javascript-number">JavaScript Number</a></li> 
+              <li><a href="javascript-reflect">JavaScript Reflect</a></li> 
+              <li><a href="javascript-regexp">JavaScript RegExp</a></li> 
+              <li><a href="javascript-symbol">JavaScript Symbol</a></li> 
+             </ul> 
+             <p><strong>JavaScript BOM</strong></p> 
+             <ul class="points"> 
+              <li><a href="browser-object-model">Browser Objects</a></li> 
+              <li><a href="window-object">1) Window Object</a></li> 
+              <li><a href="javascript-history-object">2) History Object</a></li> 
+              <li><a href="javascript-navigator-object">3) Navigator Object</a></li> 
+              <li><a href="javascript-screen">4) Screen Object</a></li> 
+             </ul> 
+             <p><strong>JavaScript DOM</strong></p> 
+             <ul class="points"> 
+              <li><a href="document-object-model">5) Document Object</a></li> 
+              <li><a href="document-getElementById()-method">getElementById</a></li> 
+              <li><a href="document-getElementsByName()-method">getElementsByName</a></li> 
+              <li><a href="document-getElementsByTagName()-method">getElementsByTagName</a></li> 
+              <li><a href="javascript-innerHTML">JavaScript innerHTML property</a></li> 
+              <li><a href="javascript-innerText">JavaScript innerText property</a></li> 
+             </ul> 
+             <p><strong>JavaScript Validation</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-form-validation">JavaScript form validation</a></li> 
+              <li><a href="javascript-form-validation#email">JavaScript email validation</a></li> 
+             </ul> 
+             <p><strong>JavaScript OOPs</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-oops-classes">JavaScript Class</a></li> 
+              <li><a href="javascript-objects">JavaScript Object</a></li> 
+              <li><a href="javascript-oops-prototype-object">JavaScript Prototype</a></li> 
+              <li><a href="javascript-oops-constructor-method">JavaScript constructor Method</a></li> 
+              <li><a href="javascript-oops-static-method">JavaScript static Method</a></li> 
+              <li><a href="javascript-oops-encapsulation">JavaScript Encapsulation</a></li> 
+              <li><a href="javascript-oops-inheritance">JavaScript Inheritance</a></li> 
+              <li><a href="javascript-oops-polymorphism">JavaScript Polymorphism</a></li> 
+              <li><a href="javascript-oops-abstraction">JavaScript Abstraction</a></li> 
+             </ul> 
+             <p><strong>JavaScript Cookies</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-cookies">JavaScript Cookies</a></li> 
+              <li><a href="javascript-cookie-attributes">Cookie Attributes</a></li> 
+              <li><a href="javascript-cookie-with-multiple-name">Cookie with multiple Name</a></li> 
+              <li><a href="javascript-deleting-cookies">Deleting Cookies</a></li> 
+             </ul> 
+             <p><strong>JavaScript Events</strong></p> 
+             <ul class="points"> <a href="understanding-html-dom-events">HTML/DOM Events</a> 
+             </ul> 
+             <p><strong>JavaScript Misc</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-this-keyword">JavaScript this Keyword</a></li> 
+              <li><a href="javascript-debugging">JavaScript Debugging</a></li> 
+              <li><a href="javascript-hoisting">JavaScript Hoisting</a></li> 
+              <li><a href="javascript-strict-mode">JavaScript Strict Mode</a></li> 
+             </ul> 
+             <p><strong>JavaScript Advance</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-typedarray">JavaScript TypedArray</a></li> 
+              <li><a href="javascript-set">JavaScript Set</a></li> 
+              <li><a href="javascript-map">JavaScript Map</a></li> 
+              <li><a href="javascript-weakset">JavaScript WeakSet</a></li> 
+              <li><a href="javascript-weakmap">JavaScript WeakMap</a></li> 
+             </ul> 
+             <p><strong>Interview Questions</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-interview-questions">JavaScript Interview Questions</a></li> 
+             </ul> 
+             <p><strong>JavaScript Methods</strong></p> 
+             <p><strong>JavaScript Array Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-array">JavaScript Array</a></li> 
+              <li><a href="javascript-array-concat-method">Array concat() method</a></li> 
+              <li><a href="javascript-array-copywithin-method">Array copywithin() method</a></li> 
+              <li><a href="javascript-array-every-method">Array every() method</a></li> 
+              <li><a href="javascript-array-fill-method">Array fill() method</a></li> 
+              <li><a href="javascript-array-filter-method">Array filter() method</a></li> 
+              <li><a href="javascript-array-find-method">Array find() method</a></li> 
+              <li><a href="javascript-array-findindex-method">Array findIndex() method</a></li> 
+              <li><a href="javascript-array-foreach-method">Array forEach() method</a></li> 
+              <li><a href="javascript-array-includes-method">Array includes() method</a></li> 
+              <li><a href="javascript-array-indexof-method">Array indexOf() method</a></li> 
+              <li><a href="javascript-array-join-method">Array join() method</a></li> 
+              <li><a href="javascript-array-lastindexof-method">Array lastIndexOf() method</a></li> 
+              <li><a href="javascript-array-map-method">Array map() method</a></li> 
+              <li><a href="javascript-array-pop-method">Array pop() method</a></li> 
+              <li><a href="javascript-array-push-method">Array push() method</a></li> 
+              <li><a href="javascript-array-reverse-method">Array reverse() method</a></li> 
+              <li><a href="javascript-array-shift-method">Array shift() method</a></li> 
+              <li><a href="javascript-array-slice-method">Array slice() method</a></li> 
+              <li><a href="javascript-array-sort-method">Array sort() method</a></li> 
+              <li><a href="javascript-array-splice-method">Array splice() method</a></li> 
+              <li><a href="javascript-array-unshift-method">Array unshift() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript DataView Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="post/javascript-dataview">JavaScript DataView</a></li> 
+              <li><a href="post/javascript-dataview-getfloat32-method">DataView getFloat32() method</a></li> 
+              <li><a href="post/javascript-dataview-getfloat64-method">DataView getFloat64() method</a></li> 
+              <li><a href="post/javascript-dataview-getint8-method">DataView getInt8() method</a></li> 
+              <li><a href="post/javascript-dataview-getint16-method">DataView getInt16() method</a></li> 
+              <li><a href="post/javascript-dataview-getint32-method">DataView getInt32() method</a></li> 
+              <li><a href="post/javascript-dataview-getuint8-method">DataView getUint8() method</a></li> 
+              <li><a href="post/javascript-dataview-getuint16-method">DataView getUint16() method</a></li> 
+              <li><a href="post/javascript-dataview-getuint32-method">DataView getUint32() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript Function Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-function">JavaScript Function</a></li> 
+              <li><a href="javascript-function-apply-method">Function apply() method</a></li> 
+              <li><a href="javascript-function-bind-method">Function bind() method</a></li> 
+              <li><a href="javascript-function-call-method">Function call() method</a></li> 
+              <li><a href="javascript-function-tostring-method">Function toString() method</a></li> 
+             </ul> 
+            </div> 
+            <div class="col-3"> 
+             <p><strong>JavaScript Date Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-date">JavaScript Date</a></li> 
+              <li><a href="javascript-date-getdate-method">date getDate() method</a></li> 
+              <li><a href="javascript-date-getday-method">date getDay() method</a></li> 
+              <li><a href="javascript-date-getfullyear-method">date getFullYears() method</a></li> 
+              <li><a href="javascript-date-gethours-method">date getHours() method</a></li> 
+              <li><a href="javascript-date-getmilliseconds-method">date getMilliseconds() method</a></li> 
+              <li><a href="javascript-date-getminutes-method">date getMinutes() method</a></li> 
+              <li><a href="javascript-date-getmonth-method">date getMonth() method</a></li> 
+              <li><a href="javascript-date-getseconds-method">date getSeconds() method</a></li> 
+              <li><a href="javascript-date-getutcdate-method">date getUTCDate() method</a></li> 
+              <li><a href="javascript-date-getutcday-method">date getUTCDay() method</a></li> 
+              <li><a href="javascript-date-getutcfullyears-method">date getUTCFullYears() method</a></li> 
+              <li><a href="javascript-date-getutchours-method">date getUTCHours() method</a></li> 
+              <li><a href="javascript-date-getutcminutes-method">date getUTCMinutes() method</a></li> 
+              <li><a href="javascript-date-getutcmonth-method">date getUTCMonth() method</a></li> 
+              <li><a href="javascript-date-getutcseconds-method">date getUTCSeconds() method</a></li> 
+              <li>date setDate() method</li> 
+              <li>date setDay() method</li> 
+              <li>date setFullYears() method</li> 
+              <li><a href="javascript-date-sethours-method">date setHours() method</a></li> 
+              <li><a href="javascript-date-setmilliseconds-method">date setMilliseconds() method</a></li> 
+              <li><a href="javascript-date-setminutes-method">date setMinutes() method</a></li> 
+              <li>date setMonth() method</li> 
+              <li><a href="javascript-date-setseconds-method">date setSeconds() method</a></li> 
+              <li><a href="javascript-date-setutcdate-method">date setUTCDate() method</a></li> 
+              <li>date setUTCDay() method</li> 
+              <li><a href="javascript-date-setutcfullyears-method">date setUTCFullYears() method</a></li> 
+              <li><a href="javascript-date-setutchours-method">date setUTCHours() method</a></li> 
+              <li>date setUTCMilliseconds() method</li> 
+              <li><a href="javascript-date-setutcminutes-method">date setUTCMinutes() method</a></li> 
+              <li><a href="javascript-date-setutcmonth-method">date setUTCMonth() method</a></li> 
+              <li><a href="javascript-date-setutcseconds-method">date setUTCSeconds() method</a></li> 
+              <li><a href="javascript-date-todatestring-method">date toDateString() method</a></li> 
+              <li><a href="javascript-date-toisostring-method">date toISOString() method</a></li> 
+              <li><a href="javascript-date-tojson-method">date toJSON() method</a></li> 
+              <li><a href="javascript-date-tostring-method">date toString() method</a></li> 
+              <li><a href="javascript-date-totimestring-method">date toTimeString() method</a></li> 
+              <li><a href="javascript-date-toutcstring-method">date toUTCString() method</a></li> 
+              <li><a href="javascript-date-valueof-method">date valueOf() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript handler Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-handler">JavaScript handler</a></li> 
+              <li><a href="javascript-handler-apply-method">handler apply() method</a></li> 
+              <li><a href="javascript-handler-construct-method">handler construct() method</a></li> 
+              <li><a href="javascript-handler-defineproperty-method">handler defineProperty() method</a></li> 
+              <li><a href="javascript-handler-deleteproperty-method">handler deleteProperty() method</a></li> 
+              <li><a href="javascript-handler-get-method">handler get() method</a></li> 
+              <li><a href="javascript-handler-getownpropertydescriptor-method">handler getOwnPropertyDescriptor() method</a></li> 
+              <li><a href="javascript-handler-getprototypeof-method">handler getPrototypeOf() method</a></li> 
+              <li><a href="javascript-handler-has-method">handler has() method</a></li> 
+              <li><a href="javascript-handler-isextensible-method">handler isExtensible() method</a></li> 
+              <li><a href="javascript-handler-ownkeys-method">handler ownKeys() method</a></li> 
+              <li><a href="javascript-handler-preventextensions-method">handler preventExtensions() method</a></li> 
+              <li><a href="javascript-handler-set-method">handler set() method</a></li> 
+              <li><a href="javascript-handler-setprototypeof-method">handler setPrototypeOf() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript JSON Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-json">JavaScript JSON</a></li> 
+              <li><a href="javascript-json-parse-method">JSON.parse() method</a></li> 
+              <li><a href="javascript-json-stringify-method">JSON.stringify() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript Map Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-map">JavaScript Map</a></li> 
+              <li><a href="javascript-map-clear-method">Map clear() method</a></li> 
+              <li><a href="javascript-map-delete-method">Map delete() method</a></li> 
+              <li><a href="javascript-map-entries-method">Map entries() method</a></li> 
+              <li><a href="javascript-map-foreach-method">Map forEach() method</a></li> 
+              <li><a href="javascript-map-get-method">Map get() method</a></li> 
+              <li><a href="javascript-map-has-method">Map has() method</a></li> 
+              <li><a href="javascript-map-keys-method">Map keys() method</a></li> 
+              <li><a href="javascript-map-set-method">Map set() method</a></li> 
+              <li><a href="javascript-map-values-method">Map values() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript Math Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-math">JavaScript Math</a></li> 
+              <li><a href="javascript-math-abs-method">Math abs() method</a></li> 
+              <li><a href="javascript-math-acos-method">Math acos() method</a></li> 
+              <li><a href="javascript-math-asin-method">Math asin() method</a></li> 
+              <li><a href="javascript-math-atan-method">Math atan() method</a></li> 
+              <li><a href="javascript-math-cbrt-method">Math cbrt() method</a></li> 
+              <li><a href="javascript-math-ceil-method">Math ceil() method</a></li> 
+              <li><a href="javascript-math-cos-method">Math cos() method</a></li> 
+              <li><a href="javascript-math-cosh-method">Math cosh() method</a></li> 
+              <li><a href="javascript-math-exp-method">Math exp() method</a></li> 
+              <li><a href="javascript-math-floor-method">Math floor() method</a></li> 
+              <li><a href="javascript-math-hypot-method">Math hypot() method</a></li> 
+              <li><a href="javascript-math-log-method">Math log() method</a></li> 
+              <li><a href="javascript-math-max-method">Math max() method</a></li> 
+              <li><a href="javascript-math-min-method">Math min() method</a></li> 
+              <li><a href="javascript-math-pow-method">Math pow() method</a></li> 
+              <li><a href="javascript-math-random-method">Math random() method</a></li> 
+              <li><a href="javascript-math-round-method">Math round() method</a></li> 
+              <li><a href="javascript-math-sign-method">Math sign() method</a></li> 
+              <li><a href="javascript-math-sin-method">Math sin() method</a></li> 
+              <li><a href="javascript-math-sinh-method">Math sinh() method</a></li> 
+              <li><a href="javascript-math-sqrt-method">Math sqrt() method</a></li> 
+              <li><a href="javascript-math-tan-method">Math tan() method</a></li> 
+              <li><a href="javascript-math-tanh-method">Math tanh() method</a></li> 
+              <li><a href="javascript-math-trunc-method">Math trunc() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript Number Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-number">JavaScript Number</a></li> 
+              <li><a href="javascript-number-isfinite-method">Number isFinite() method</a></li> 
+              <li><a href="javascript-number-isinteger-method">Number isInteger() method</a></li> 
+              <li><a href="javascript-number-parsefloat-method">Number parseFloat() method</a></li> 
+              <li><a href="javascript-number-parseint-method">Number parseInt() method</a></li> 
+              <li><a href="javascript-number-toexponential-method">Number toExponential() method</a></li> 
+              <li><a href="javascript-number-tofixed-method">Number toFixed() method</a></li> 
+              <li><a href="javascript-number-toprecision-method">Number toPrecision() method</a></li> 
+              <li><a href="javascript-number-tostring-method">Number toString() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript RegExp Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-regexp">JavaScript RegExp</a></li> 
+              <li><a href="javascript-regexp-exec-method">RegExp.exec() method</a></li> 
+              <li><a href="javascript-regexp-test-method">RegExp.test() method</a></li> 
+              <li><a href="javascript-regexp-tostring-method">RegExp.toString() method</a></li> 
+             </ul> 
+            </div> 
+            <div class="col-3"> 
+             <p><strong>JavaScript Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-objects">JavaScript Object</a></li> 
+              <li><a href="javascript-object-assign-method">Object.assign() method</a></li> 
+              <li><a href="javascript-object-create-method">Object.create() method</a></li> 
+              <li><a href="javascript-object-defineproperty-method">Object.defineProperty() method</a></li> 
+              <li><a href="javascript-object-defineproperties-method">Object.defineProperties() method</a></li> 
+              <li><a href="javascript-object-entries-method">Object.entries() method</a></li> 
+              <li><a href="javascript-object-freeze-method">Object.freeze() method</a></li> 
+              <li><a href="javascript-object-getownpropertydescriptor-method">getOwnPropertyDescriptor() method</a></li> 
+              <li><a href="javascript-object-getownpropertydescriptors-method">getOwnPropertyDescriptors() method</a></li> 
+              <li><a href="javascript-object-getownpropertynames-method">getOwnPropertyNames() method</a></li> 
+              <li><a href="javascript-object-getownpropertysymbols-method">getOwnPropertySymbols() method</a></li> 
+              <li><a href="javascript-object-getprototypeof-method">Object.getPrototypeOf() method</a></li> 
+              <li><a href="javascript-object-is-method">Object.is() method</a></li> 
+              <li><a href="javascript-object-preventextensions-method">preventExtensions() method</a></li> 
+              <li><a href="javascript-object-seal-method">Object.seal() method</a></li> 
+              <li><a href="javascript-object-setprototypeof-method">Object.setPrototypeOf() method</a></li> 
+              <li><a href="javascript-object-values-method">Object.values() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript Reflect Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-reflect">JavaScript Reflect</a></li> 
+              <li><a href="javascript-reflect-apply-method">Reflect.apply() method</a></li> 
+              <li><a href="javascript-reflect-construct-method">Reflect.construct() method</a></li> 
+              <li><a href="javascript-reflect-defineproperty-method">Reflect.defineProperty() method</a></li> 
+              <li><a href="javascript-reflect-deleteproperty-method">Reflect.deleteProperty() method</a></li> 
+              <li><a href="javascript-reflect-get-method">Reflect.get() method</a></li> 
+              <li><a href="javascript-reflect-getownpropertydescriptor-method">getOwnPropertyDescriptor() method</a></li> 
+              <li><a href="javascript-reflect-getprototypeof-method">Reflect.getPrototypeOf() method</a></li> 
+              <li><a href="javascript-reflect-has-method">Reflect.has() method</a></li> 
+              <li><a href="javascript-reflect-isextensible-method">Reflect.isExtensible() method</a></li> 
+              <li><a href="javascript-reflect-ownkeys-method">Reflect.ownKeys() method</a></li> 
+              <li><a href="javascript-reflect-preventextensions-method">preventExtensions() method</a></li> 
+              <li><a href="javascript-reflect-set-method">Reflect.set() method</a></li> 
+              <li><a href="javascript-reflect-setprototypeof-method">Reflect.setPrototypeOf() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript Set Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-set">JavaScript Set</a></li> 
+              <li><a href="javascript-set-add-method">Set add() method</a></li> 
+              <li><a href="javascript-set-clear-method">Set clear() method</a></li> 
+              <li><a href="javascript-set-delete-method">Set delete() method</a></li> 
+              <li><a href="javascript-set-entries-method">Set entries() method</a></li> 
+              <li><a href="javascript-set-foreach-method">Set forEach() method</a></li> 
+              <li><a href="javascript-set-has-method">Set has() method</a></li> 
+              <li><a href="javascript-set-values-method">Set values() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript String Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-string">String charAt() method</a></li> 
+              <li><a href="javascript-string-charat-method">String charAt() method</a></li> 
+              <li><a href="javascript-string-charcodeat-method">String charCodeAt() method</a></li> 
+              <li><a href="javascript-string-concat-method">String concat() method</a></li> 
+              <li><a href="javascript-string-indexof-method">String indexOf() method</a></li> 
+              <li><a href="javascript-string-lastindexof-method">String lastIndexOf() method</a></li> 
+              <li><a href="javascript-string-search-method">String search() method</a></li> 
+              <li><a href="javascript-string-match-method">String match()</a></li><a href="javascript-string-match-method"> </a>
+              <li><a href="javascript-string-match-method"></a><a href="javascript-string-replace-method">String replace() method</a></li> 
+              <li><a href="javascript-string-substr-method">String substr() method</a></li> 
+              <li><a href="javascript-string-substring-method">String substring() method</a></li> 
+              <li><a href="javascript-string-slice-method">String slice() method</a></li> 
+              <li><a href="javascript-string-tolowercase-method">String toLowerCase() method</a></li> 
+              <li><a href="javascript-string-tolocalelowercase-method">toLocaleLowerCase() method</a></li> 
+              <li><a href="javascript-string-touppercase-method">String toUpperCase() method</a></li> 
+              <li><a href="javascript-string-tolocaleuppercase-method">toLocaleUpperCase() method</a></li> 
+              <li><a href="javascript-string-tostring-method">String toString() method</a></li> 
+              <li><a href="javascript-string-valueof-method">String valueOf() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript Symbol Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-symbol">JavaScript Symbol</a></li> 
+              <li><a href="javascript-symbol-for-method">Symbol.for() method</a></li> 
+              <li><a href="javascript-symbol-keyfor-method">Symbol.keyFor() method</a></li> 
+              <li><a href="javascript-symbol-tostring-method">Symbol.toString() method</a></li> 
+             </ul> 
+             <p><strong>Symbol Property</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-symbol-hasinstance-property">Symbol.hasInstance Property</a></li> 
+              <li><a href="javascript-symbol-isconcatspreadable-property">isConcatSpreadable Property</a></li> 
+              <li><a href="javascript-symbol-match-property">Symbol.match Property</a></li> 
+              <li><a href="javascript-symbol-prototype-property">Symbol.prototype Property</a></li> 
+              <li><a href="javascript-symbol-replace-property">Symbol.replace Property</a></li> 
+              <li><a href="javascript-symbol-search-property">Symbol.search Property</a></li> 
+              <li><a href="javascript-symbol-split-property">Symbol.split Property</a></li> 
+              <li><a href="javascript-symbol-tostringtag-property">Symbol.toStringTag Property</a></li> 
+              <li><a href="javascript-symbol-unscopables-property">Symbol.unscopables Property</a></li> 
+             </ul> 
+             <p><strong>JavaScript TypedArray Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-typedarray">JavaScript TypedArray</a></li> 
+              <li><a href="javascript-typedarray-copywithin-method">TypedArray copyWithin() method</a></li> 
+              <li><a href="javascript-typedarray-entries-method">TypedArray entries() method</a></li> 
+              <li><a href="javascript-typedarray-every-method">TypedArray every() method</a></li> 
+              <li><a href="javascript-typedarray-fill-method">TypedArray fill() method</a></li> 
+              <li><a href="javascript-typedarray-filter-method">TypedArray filter() method</a></li> 
+              <li><a href="javascript-typedarray-find-method">TypedArray find() method</a></li> 
+              <li><a href="javascript-typedarray-findindex-method">TypedArray findIndex() method</a></li> 
+              <li><a href="javascript-typedarray-foreach-method">TypedArray forEach() method</a></li> 
+              <li><a href="javascript-typedarray-includes-method">TypedArray includes() method</a></li> 
+              <li><a href="javascript-typedarray-indexof-method">TypedArray indexof() method</a></li> 
+              <li><a href="javascript-typedarray-join-method">TypedArray join() method</a></li> 
+              <li><a href="javascript-typedarray-keys-method">TypedArray Keys() method</a></li> 
+              <li><a href="javascript-typedarray-lastindexof-method">TypedArray lastIndexof() method</a></li> 
+              <li><a href="javascript-typedarray-map-method">TypedArray map() method</a></li> 
+              <li><a href="javascript-typedarray-reduce-method">TypedArray reduce() method</a></li> 
+              <li><a href="javascript-typedarray-reduceright-method">TypedArray reduceRight() method</a></li> 
+              <li><a href="javascript-typedarray-reverse-method">TypedArray reverse() method</a></li> 
+              <li><a href="javascript-typedarray-set-method">TypedArray set() method</a></li> 
+              <li><a href="javascript-typedarray-slice-method">TypedArray Slice() method</a></li> 
+              <li><a href="javascript-typedarray-some-method">TypedArray some() method</a></li> 
+              <li><a href="javascript-typedarray-sort-method">TypedArray sort() method</a></li> 
+              <li><a href="javascript-typedarray-subarray-method">TypedArray subarray() method</a></li> 
+              <li><a href="javascript-typedarray-values-method">TypedArray values() method</a></li> 
+              <li><a href="javascript-typedarray-tolocalestring-method">toLocaleString() method</a></li> 
+              <li><a href="javascript-typedarray-tostring-method">TypedArray toString() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript WeakMap Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-weakmap">JavaScript WeakMap</a></li> 
+              <li><a href="javascript-weakmap-delete-method">WeakMap delete() method</a></li> 
+              <li><a href="javascript-weakmap-get-method">WeakMap get() method</a></li> 
+              <li><a href="javascript-weakmap-has-method">WeakMap has() method</a></li> 
+              <li><a href="javascript-weakmap-set-method">WeakMap set() method</a></li> 
+             </ul> 
+             <p><strong>JavaScript WeakSet Object</strong></p> 
+             <ul class="points"> 
+              <li><a href="javascript-weakset">JavaScript WeakSet</a></li> 
+              <li><a href="javascript-weakset-add-method">WeakSet add() method</a></li> 
+              <li><a href="javascript-weakset-delete-method">WeakSet delete() method</a></li> 
+              <li><a href="javascript-weakset-has-method">WeakSet has() method</a></li> 
+             </ul> 
+            </div> 
+           </div> 
+           <hr> <h2 class="h2">Prerequisite</h2> <p>Before learning JavaScript in depth, you must have the basic knowledge of HTML.</p> <h2 class="h2">Audience</h2> <p>We have developed this JavaScript tutorial for beginners and professionals both. There are given a lot of examples with JavaScript editor. So, you can easily edit your JavaScript code which will help you to learn JavaScript easily. </p> <h2 class="h2">Problem</h2> <p>We assure you that you will not find any problem in our JavaScript tutorial. But, if you find any mistake, you can post it in our comment section.</p> 
+           <hr> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="javascript-example">JavaScript Example</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:right" class="next" href="javascript-example">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <span class="__cf_email__" data-cfemail="76101313121417151d361c1700170206191f18025815191b">[email&nbsp;protected]</span></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/javascript-tutorial"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/javascript-tutorial"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/javascript-tutorial"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <span class="__cf_email__" data-cfemail="422a30022823342336322d2b2c366c212d2f">[email&nbsp;protected]</span>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <span class="__cf_email__" data-cfemail="9af2e8daf0fbecfbeeeaf5f3f4eeb4f9f5f7b4">[email&nbsp;protected]</span> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

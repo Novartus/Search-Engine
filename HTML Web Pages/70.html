@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Data Structures | DS Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Data Structures | DS Tutorial - javatpoint">
+  <meta property="og:description" content="Data Structures | DS Tutorial with Introduction, Asymptotic Analysis, Array, Pointer, Structure, Singly Linked List, Doubly Linked List, Circular Linked List, Binary Search, Linear Search, Sorting, Bucket Sort, Comb Sort, Shell Sort, Heap Sort, Merge Sort, Selection Sort, Counting Sort, Stack, Qene, Circular Quene, Graph, Tree, B Tree, B+ Tree, Avl Tree etc."> 
+  <meta name="keywords" content="data structure tutorial, introduction, asymptotic analysis, array, pointer, structure, singly linked list, doubly linked list, circular linked list, binary search, linear search, sorting, bucket sort, comb sort, shell sort, heap sort, merge sort, selection sort, counting sort, stack, quene, circular quene, graph, tree, b tree, b+ tree, avl tree">
+  <meta name="description" content="Data Structures | DS Tutorial with Introduction, Asymptotic Analysis, Array, Pointer, Structure, Singly Linked List, Doubly Linked List, Circular Linked List, Binary Search, Linear Search, Sorting, Bucket Sort, Comb Sort, Shell Sort, Heap Sort, Merge Sort, Selection Sort, Counting Sort, Stack, Qene, Circular Quene, Graph, Tree, B Tree, B+ Tree, Avl Tree etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/data-structure-tutorial"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Data Structures | DS Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Data Structures | DS Tutorial with Introduction, Asymptotic Analysis, Array, Pointer, Structure, Singly Linked List, Doubly Linked List, Circular Linked List, Binary Search, Linear Search, Sorting, Bucket Sort, Comb Sort, Shell Sort, Heap Sort, Merge Sort, Selection Sort, Counting Sort, Stack, Qene, Circular Quene, Graph, Tree, B Tree, B+ Tree, Avl Tree etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/data-structure-tutorial">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="data-structure-tutorial" class="selected">Data Structure</a></li> 
+       <li><a href="c-programming-language-tutorial">C</a></li> 
+       <li><a href="cpp-tutorial">C++</a></li> 
+       <li><a href="c-sharp-tutorial">C#</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="css-tutorial">CSS</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="ajax-tutorial">Ajax</a></li> 
+       <li><a href="android-tutorial">Android</a></li> 
+       <li><a href="cloud-computing-tutorial">Cloud</a></li> 
+       <li><a href="design-patterns-in-java">Design Pattern</a></li> 
+       <li><a href="examaccess">Quiz</a></li> 
+       <li><a href="free-java-projects">Projects</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DS Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="data-structure-tutorial">DS Tutorial</a> <a href="data-structure-introduction">DS Introduction</a> <a href="data-structure-algorithm">DS Algorithm</a> <a href="data-structure-asymptotic-analysis">Asymptotic Analysis</a> <a href="data-structure-pointer">DS Pointer</a> <a href="data-structure-structure">DS Structure</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DS Array</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="data-structure-array">DS Array</a> <a href="data-structure-2d-array">2D Array</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DS Linked List</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="ds-linked-list">Linked List</a> <a href="ds-types-of-linked-list">Types of Linked List</a> <a href="singly-linked-list">Singly Linked List</a> <a href="doubly-linked-list">Doubly Linked List</a> <a href="circular-singly-linked-list">Circular Linked List</a> <a href="circular-doubly-linked-list">Circular Doubly List</a> <a href="skip-list-in-data-structure">Skip list in DS</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DS Stack</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="data-structure-stack">DS Stack</a> <a href="ds-array-implementation-of-stack">Array Implementation</a> <a href="ds-linked-list-implementation-of-stack">Linked List Implementation</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DS Queue</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="data-structure-queue">DS Queue</a> <a href="ds-types-of-queues">Types of Queues</a> <a href="array-representation-of-queue">Array Representation</a> <a href="linked-list-implementation-of-queue">Linked List Representation</a> <a href="circular-queue">Circular Queue</a> <a href="ds-deque">Deque</a> <a href="ds-priority-queue">Priority Queue</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DS Tree</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="tree">DS Tree</a> <a href="binary-tree">Binary Tree</a> <a href="binary-search-tree">Binary Search Tree</a> <a href="avl-tree">AVL Tree</a> <a href="b-tree">B Tree</a> <a href="b-plus-tree">B+ Tree</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DS Graph</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="ds-graph">DS Graph</a> <a href="graph-representation">Graph Implementation</a> <a href="breadth-first-search-algorithm">BFS Algorithm</a> <a href="depth-first-search-algorithm">DFS Algorithm</a> <a href="spanning-tree">Spanning Tree</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DS Searching</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="linear-search">Linear Search</a> <a href="binary-search">Binary Search</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DS Sorting</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="bubble-sort">Bubble Sort</a> <a href="bucket-sort">Bucket Sort</a> <a href="comb-sort">Comb Sort</a> <a href="counting-sort">Counting Sort</a> <a href="heap-sort">Heap Sort</a> <a href="insertion-sort">Insertion Sort</a> <a href="merge-sort">Merge Sort</a> <a href="quick-sort">Quick Sort</a> <a href="radix-sort">Radix Sort</a> <a href="selection-sort">Selection Sort</a> <a href="shell-sort">Shell Sort</a> <a href="bitonic-sort">Bitonic Sort</a> <a href="cocktail-sort">Cocktail Sort</a> <a href="cycle-sort">Cycle Sort</a> <a href="tim-sort">Tim Sort</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Differences</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="linear-vs-non-linear-data-structure">Linear vs non-linear</a> <a href="ds-array-vs-linked-list">Array vs linked list</a> <a href="ds-stack-vs-queue">Stack vs queue</a> <a href="ds-linear-vs-circular-queue">Linear vs Circular Queue</a> <a href="ds-linear-search-vs-binary-search">Linear Search vs Binary Search</a> <a href="singly-linked-list-vs-doubly-linked-list">Singly Linked List vs Doubly Linked List</a> <a href="binary-tree-vs-binary-search-tree">Binary vs Binary Search Tree</a> <a href="tree-vs-graph-data-structure">Tree vs Graph</a> <a href="binary-search-tree-vs-avl-tree">Binary Search tree vs AVL tree</a> <a href="red-black-tree-vs-avl-tree">Red Black Tree vs AVL tree</a> <a href="b-tree-vs-bplus-tree">B tree vs B+ tree</a> <a href="quick-sort-vs-merge-sort">Quick Sort vs Merge Sort</a> <a href="bfs-vs-dfs">BFS vs DFS</a> <a href="stack-vs-heap">Stack vs Heap</a> <a href="bubble-sort-vs-selection-sort">Bubble sort vs. Selection sort</a> <a href="ds-stack-vs-array">Stack vs Array</a> <a href="full-binary-tree-vs-complete-binary-tree">Full Binary Tree vs Complete Binary Tree</a> <a href="binary-tree-vs-b-tree">Binary Tree vs B Tree</a> <a href="primitive-vs-non-primitive-data-structure">Primitive vs non-primitive data structure</a> <a href="data-types-vs-data-structure">Data types vs data structure</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Misc</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="trie-data-structure">Trie Data Structure</a> <a href="heap-data-structure">Heap Data Structure</a> <a href="splay-tree">Splay Tree</a> <a href="fundamental-of-the-data-structure">Fundamental of the DS</a> <a href="hash-table">Hash Table</a> <a href="preorder-traversal">Preorder Traversal</a> <a href="tree-traversal">Tree Traversal</a> <a href="implementation-of-queue-using-stacks">Implementation of Queue using Stacks</a> <a href="implementation-of-stack-using-queue">Implementation of Stack using Queue</a> <a href="binomial-heap">Binomial Heap</a> <a href="postorder-traversal">Postorder Traversal</a> <a href="sparse-matrix">Sparse Matrix</a> <a href="detect-loop-in-a-linked-list">Detect loop in a Linked list</a> <a href="inorder-traversal">Inorder Traversal</a> <a href="convert-infix-to-postfix-notation">Convert Infix to Postfix notation</a> <a href="convert-infix-to-prefix-notation">Convert infix to prefix notation</a> <a href="conversion-of-prefix-to-postfix-expression">Conversion of Prefix to Postfix expression</a> <a href="conversion-of-postfix-to-prefix-expression">Conversion of Postfix to Prefix expression</a> <a href="remove-loop-in-a-linked-list">Remove the loop in a Linked List</a> <a href="implement-two-stacks-in-an-array">Implement two stacks in an array</a> <a href="reverse-a-stack-using-recursion">Reverse a stack using recursion</a> <a href="detect-cycle-in-a-directed-graph">Detect cycle in a directed graph</a> <a href="optimal-binary-search-tree">Optimal Binary Search Tree</a> <a href="priority-queue-using-linked-list">Priority Queue using Linked list</a> <a href="balanced-binary-search-tree">Balanced Binary Search Tree</a> <a href="boundary-traversal-of-binary-tree">Boundary Traversal of Binary tree</a> <a href="diagonal-traversal-of-binary-tree">Diagonal Traversal of Binary Tree</a> <a href="vertical-traversal-of-a-binary-tree">Vertical Traversal of a Binary tree</a> <a href="graph-algorithms">Graph Algorithms</a> <a href="time-complexity-of-sorting-algorithms">Time Complexity of Sorting Algorithms</a> <a href="applications-of-stack-in-data-structure">Applications of Stack in Data Structure</a> <a href="dictionary-data-structure">Dictionary Data Structure</a> <a href="structured-data-and-unstructured-data">Structured Data and Unstructured Data</a> <a href="list-data-structure">List Data Structure</a> <a href="types-of-tree-in-data-structure">Types of Tree in Data Structure</a> <a href="abstract-data-type-in-data-structure">Abstract data type in data structure</a> <a href="disjoint-set-data-structure">Disjoint set data structure</a> <a href="dynamic-data-structure">Dynamic Data Structure</a> <a href="hash-function-in-data-structure">Hash Function in Data Structure</a> <a href="complete-binary-tree">Complete Binary Tree</a> <a href="threaded-binary-tree">Threaded Binary Tree</a> <a href="diameter-of-binary-tree">Diameter of Binary Tree</a> <a href="height-of-binary-tree">Height of Binary Tree</a> <a href="inorder-tree-traversal-without-stack">Inorder Tree Traversal without Stack</a> <a href="enumeration-of-binary-trees">Enumeration of Binary Trees</a> <a href="maximum-width-of-a-binary-tree">Maximum Width of a Binary Tree</a> <a href="types-of-graph-in-data-structure">Types of Graph in Data Structure</a> <a href="primitive-data-type">Primitive Data Type</a> <a href="semi-structured-data">Semi-Structured Data</a> <a href="advance-data-structures">Advance Data Structures</a> <a href="sort-an-array-of-0s-1s-and-2s">Sort an Array of 0's, 1's, and 2's</a> <a href="stock-span-problem">Stock Span Problem</a> <a href="implementation-of-deque-by-circular-array">Implementation of Deque by Circular Array</a> <a href="rotate-operation-in-linked-list">Rotate Operation in Linked List</a> <a href="subarray-with-given-sum">Subarray with given sum</a> <a href="self-organizing-list">Self-organizing List</a> <a href="unrolled-linked-list">Unrolled Linked List</a> <a href="types-of-sparse-matrices">Types of Sparse Matrices</a> <a href="application-of-linked-list">Application of Linked List</a> <a href="topological-sorting">Topological Sorting</a> <a href="ternary-search-tree">Ternary Search Tree</a> <a href="stock-span-problem">Stock Span Problem</a> <a href="treap-data-structure">Treap Data Structure</a> <a href="quicksort-on-doubly-linked-list">Quicksort on Doubly Linked List</a> <a href="inversion-count">Inversion count</a> <a href="expression-tree-in-data-structure">Expression tree in DS</a> <a href="garbage-collection-in-data-structure">Garbage Collection in DS</a> <a href="merge-sort-on-doubly-linked-list">Merge Sort on Doubly Linked List</a> <a href="sort-stack-using-recursion">Sort Stack using Recursion</a> <a href="lifo-approach-in-data-structure">LIFO Approach in data structure</a> <a href="big-O-notation-in-data-structure">Big O Notation in DS</a> <a href="binary-tree-traversal-in-data-structure">Binary Tree Traversal in DS</a> <a href="queue-operations-in-data-structure">Queue Operations in DS</a> <a href="what-is-a-non-linear-data-structure">What is a Non-Linear Data Structure</a> <a href="fifo-approach-in-data-structure">FIFO Approach in data structure</a> <a href="what-are-connected-graphs-in-data-structure">What are connected graphs in data structure</a> <a href="which-python-data-structure-is-immutable">Which Python data structure is immutable</a> <a href="which-data-structure-is-used-by-map">Which data structure is used by map</a> <a href="what-is-iteration-in-data-structure">What is iteration in data structure</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DS MCQ</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="data-structure-mcq">Data Structure MCQ</a> <a href="advanced-data-structure-mcq">Advanced DS MCQ</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="data-structure-introduction">next &#x2192;</a> 
+           </div> <h1 class="h1">Data Structures Tutorial</h1> <img src="https://static.javatpoint.com/ds/images/ds-tutorial.png" alt="DS Tutorial" class="imageright"> <p>Data Structures (DS) tutorial provides basic and advanced concepts of Data Structure. Our Data Structure tutorial is designed for beginners and professionals.</p> <p>Data Structure is a way to store and organize data so that it can be used efficiently.</p> <p>Our Data Structure tutorial includes all topics of Data Structure such as Array, Pointer, Structure, Linked List, Stack, Queue, Graph, Searching, Sorting, Programs, etc.</p> <h3 class="h3">What is Data Structure?</h3> <p>The data structure name indicates itself that organizing the data in memory. There are many ways of organizing the data in the memory as we have already seen one of the data structures, i.e., array in C language. Array is a collection of memory elements in which data is stored sequentially, i.e., one after another. In other words, we can say that array stores the elements in a continuous manner. This organization of data is done with the help of an array of data structures. There are also other ways to organize the data in memory. Let's see the different types of data structures.</p> <p>The data structure is not any programming language like C, C++, java, etc. It is a set of algorithms that we can use in any programming language to structure the data in the memory.</p> <p>To structure the data in memory, 'n' number of algorithms were proposed, and all these algorithms are known as Abstract data types. These abstract data types are the set of rules.</p> <img src="https://static.javatpoint.com/ds/images/data-structure-tutorial2.png" alt="Data Structures Tutorial"> <h3 class="h3">Types of Data Structures</h3> <p>There are two types of data structures:</p> 
+           <ul class="points"> 
+            <li>Primitive data structure</li> 
+            <li>Non-primitive data structure</li> 
+           </ul> <p><strong>Primitive Data structure</strong></p> <p>The primitive data structures are primitive data types. The int, char, float, double, and pointer are the primitive data structures that can hold a single value.</p> <p><strong>Non-Primitive Data structure</strong></p> <p>The non-primitive data structure is divided into two types:</p> 
+           <ul class="points"> 
+            <li>Linear data structure</li> 
+            <li>Non-linear data structure</li> 
+           </ul> <p><strong>Linear Data Structure</strong></p> <p>The arrangement of data in a sequential manner is known as a linear data structure. The data structures used for this purpose are Arrays, Linked list, Stacks, and Queues. In these data structures, one element is connected to only one another element in a linear form.</p> <p><strong>When one element is connected to the 'n' number of elements known as a non-linear data structure. The best example is trees and graphs. In this case, the elements are arranged in a random manner.</strong></p> <p>We will discuss the above data structures in brief in the coming topics. Now, we will see the common operations that we can perform on these data structures.</p> <p><strong>Data structures can also be classified as:</strong></p> 
+           <ul class="points"> 
+            <li><strong>Static data structure:</strong> It is a type of data structure where the size is allocated at the compile time. Therefore, the maximum size is fixed.</li> 
+            <li><strong>Dynamic data structure:</strong> It is a type of data structure where the size is allocated at the run time. Therefore, the maximum size is flexible.</li> 
+           </ul> <h3 class="h3">Major Operations</h3> <p>The major or the common operations that can be performed on the data structures are:</p> 
+           <ul class="points"> 
+            <li><strong>Searching:</strong> We can search for any element in a data structure.</li> 
+            <li><strong>Sorting:</strong> We can sort the elements of a data structure either in an ascending or descending order.</li> 
+            <li><strong>Insertion:</strong> We can also insert the new element in a data structure.</li> 
+            <li><strong>Updation:</strong> We can also update the element, i.e., we can replace the element with another element.</li> 
+            <li><strong>Deletion:</strong> We can also perform the delete operation to remove the element from the data structure.</li> 
+           </ul> <h3 class="h3">Which Data Structure?</h3> <p>A data structure is a way of organizing the data so that it can be used efficiently. Here, we have used the word efficiently, which in terms of both the space and time. For example, a stack is an ADT (Abstract data type) which uses either arrays or linked list data structure for the implementation. Therefore, we conclude that we require some data structure to implement a particular ADT.</p> <p>An ADT tells <strong>what</strong> is to be done and data structure tells <strong>how</strong> it is to be done. In other words, we can say that ADT gives us the blueprint while data structure provides the implementation part. Now the question arises: how can one get to know which data structure to be used for a particular ADT?.</p> <p>As the different data structures can be implemented in a particular ADT, but the different implementations are compared for time and space. For example, the Stack ADT can be implemented by both Arrays and linked list. Suppose the array is providing time efficiency while the linked list is providing space efficiency, so the one which is the best suited for the current user's requirements will be selected.</p> <h3 class="h3">Advantages of Data structures</h3> <p><strong>The following are the advantages of a data structure:</strong></p> 
+           <ul class="points"> 
+            <li><strong>Efficiency:</strong> If the choice of a data structure for implementing a particular ADT is proper, it makes the program very efficient in terms of time and space.</li> 
+            <li><strong>Reusability:</strong> The data structure provides reusability means that multiple client programs can use the data structure.</li> 
+            <li><strong>Abstraction:</strong> The data structure specified by an ADT also provides the level of abstraction. The client cannot see the internal working of the data structure, so it does not have to worry about the implementation part. The client can only see the interface.</li> 
+           </ul> 
+           <hr> <h2 class="h2 center textshadow">Data Structures Index</h2> 
+           <hr> 
+           <div class="responsivediv"> 
+            <div class="col-2"> 
+             <p><strong>DS Basics</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="data-structure-tutorial">DS Tutorial</a></li> 
+              <li><a href="data-structure-introduction">DS Introduction</a></li> 
+              <li><a href="data-structure-algorithm">DS Algorithm</a></li> 
+              <li><a href="data-structure-asymptotic-analysis">Ds Asymptotic Analysis</a></li> 
+              <li><a href="data-structure-pointer">DS Pointer</a></li> 
+              <li><a href="data-structure-structure">DS Structure</a></li> 
+             </ul> 
+             <p><strong>DS Array</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="data-structure-array">Array</a></li> 
+              <li><a href="data-structure-2d-array">2D Array</a></li> 
+             </ul> 
+             <p><strong>DS Linked List</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="singly-linked-list">Linked List</a> 
+               <ul class="pointsa"> 
+                <li><a href="insertion-in-singly-linked-list-at-beginning">Insertion at beginning</a></li> 
+                <li><a href="insertion-in-singly-linked-list-at-end">Insertion at end</a></li> 
+                <li><a href="insertion-in-singly-linked-list-after-specified-node">Insertion after specified node</a></li> 
+                <li><a href="deletion-in-singly-linked-list-at-beginning">Deletion at beginning</a></li> 
+                <li><a href="deletion-in-singly-linked-list-at-end">Deletion at end</a></li> 
+                <li><a href="deletion-in-singly-linked-list-after-specified-node">Deletion after specified node</a></li> 
+                <li><a href="traversing-in-singly-linked-list">Traversing</a></li> 
+                <li><a href="searching-in-singly-linked-list">Searching</a></li> 
+               </ul> </li> 
+              <li><a href="doubly-linked-list">Doubly Linked List</a> 
+               <ul class="pointsa"> 
+                <li><a href="insertion-in-doubly-linked-list-at-beginning">Insertion at beginning</a></li> 
+                <li><a href="insertion-in-doubly-linked-list-at-the-end">Insertion at end</a></li> 
+                <li><a href="insertion-in-doubly-linked-list-after-specified-node">Insertion after specified node</a></li> 
+                <li><a href="deletion-in-doubly-linked-list-at-beginning">Deletion at beginning</a></li> 
+                <li><a href="deletion-in-doubly-linked-list-at-the-end">Deletion at end</a></li> 
+                <li><a href="deletion-in-doubly-linked-list-after-the-specified-node">Deletion of node having given data </a></li> 
+                <li><a href="traversing-in-doubly-linked-list">Traversing</a></li> 
+                <li><a href="searching-in-doubly-linked-list">Searching</a></li> 
+               </ul> </li> 
+              <li><a href="circular-singly-linked-list">Circular Linked List</a> 
+               <ul class="pointsa"> 
+                <li><a href="insertion-in-circular-singly-list-at-beginning">Insertion at beginning</a></li> 
+                <li><a href="insertion-in-circular-singly-linked-list-at-end">Insertion at end</a></li> 
+                <li><a href="deletion-in-circular-singly-linked-list-at-beginning">Deletion at beginning</a></li> 
+                <li><a href="deletion-in-circular-singly-linked-list-at-end">Deletion at the end</a></li> 
+                <li><a href="deletion-in-circular-singly-linked-list-at-end">Traversing</a></li> 
+                <li><a href="deletion-in-circular-singly-linked-list-at-end">Searching</a></li> 
+               </ul> </li> 
+              <li><a href="circular-doubly-linked-list">Circular Doubly List</a> 
+               <ul class="pointsa"> 
+                <li><a href="insertion-in-circular-doubly-linked-list-at-beginning">Insertion at beginning</a></li> 
+                <li><a href="insertion-in-circular-doubly-linked-list-at-end">Insertion at end</a></li> 
+                <li><a href="deletion-in-circular-doubly-linked-list-at-beginning">Deletion at beginning</a></li> 
+                <li><a href="deletion-in-circular-doubly-linked-list-at-end">Deletion at the end</a></li> 
+               </ul> </li> 
+             </ul> 
+             <p><strong>DS Stack</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="data-structure-stack">DS Stack</a></li> 
+              <li><a href="ds-array-implementation-of-stack">Array Implementation</a></li> 
+              <li><a href="ds-linked-list-implementation-of-stack">Linked List Implementation</a></li> 
+             </ul> 
+             <p><strong>DS Queue</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="data-structure-queue">DS Queue</a></li> 
+              <li><a href="array-representation-of-queue">Array Implementation</a></li> 
+              <li><a href="linked-list-implementation-of-queue">Linked List Implementation</a></li> 
+              <li><a href="circular-queue">Circular Queue</a></li> 
+             </ul> 
+             <p><strong>DS Tree</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="tree">Tree</a></li> 
+              <li><a href="binary-tree">Binary Tree</a> 
+               <ul class="pointsa"> 
+                <li><a href="binary-tree-preorder-traversal">Pre-order Traversal</a></li> 
+                <li><a href="binary-tree-inorder-traversal">In-order Traversal</a></li> 
+                <li><a href="binary-tree-postorder-traversal">Post-order Traversal</a></li> 
+               </ul> </li> 
+              <li><a href="binary-search-tree">Binary Search Tree</a> 
+               <ul class="pointsa"> 
+                <li><a href="searching-in-binary-search-tree">Searching in BST</a></li> 
+                <li><a href="insertion-in-binary-search-tree">Insertion in BST</a></li> 
+                <li><a href="deletion-in-binary-search-tree">Deletion in BST</a></li> 
+               </ul> </li> 
+              <li><a href="avl-tree">AVL Tree</a> 
+               <ul class="pointsa"> 
+                <li><a href="insertion-in-avl-tree">Insertion in AVL Tree</a> 
+                 <ul class="pointsa"> 
+                  <li><a href="ll-rotation-in-avl-tree">LL Rotation</a></li> 
+                  <li><a href="lr-rotation-in-avl-tree">LR Rotation</a></li> 
+                  <li><a href="rl-rotation-in-avl-tree">RL Rotation</a></li> 
+                  <li><a href="rr-rotation-in-avl-tree">RR Rotation</a></li> 
+                 </ul> </li> 
+               </ul> 
+               <ul class="pointsa"> 
+                <li><a href="deletion-in-avl-tree">Deletion in AVL Tree</a></li> 
+               </ul> </li>
+              <li><a href="b-tree">B Tree</a></li> 
+              <li><a href="b-plus-tree">B+ Tree</a></li> 
+              <li><a href="red-black-tree">Red Black Tree</a></li> 
+             </ul> 
+             <p><strong>DS Graph</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="ds-graph">DS Graph</a></li> 
+              <li><a href="graph-representation">Graph Implementation</a></li> 
+              <li><a href="breadth-first-search-algorithm">BFS Algorithm</a></li> 
+              <li><a href="depth-first-search-algorithm">DFS Algorithm</a></li> 
+              <li><a href="spanning-tree">Spanning Tree</a> 
+               <ul class="pointsa"> 
+                <li><a href="prim-algorithm">Prim's Algorithm</a></li> 
+                <li><a href="kruskal-algorithm">Kruskal's Algorithm</a></li> 
+               </ul> </li> 
+             </ul> 
+             <p><strong>DS Searching</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="linear-search">Linear Search</a></li> 
+              <li><a href="binary-search">Binary Search</a></li> 
+             </ul> 
+             <p><strong>DS Sorting</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="bubble-sort">Bubble Sort</a></li> 
+              <li><a href="bucket-sort">Bucket Sort</a></li> 
+              <li><a href="comb-sort">Comb Sort</a></li> 
+              <li><a href="counting-sort">Counting Sort</a></li> 
+              <li><a href="heap-sort">Heap Sort</a></li> 
+              <li><a href="insertion-sort">Insertion Sort</a></li> 
+              <li><a href="merge-sort">Merge Sort</a></li> 
+              <li><a href="quick-sort">Quick Sort</a></li> 
+              <li><a href="radix-sort">Radix Sort</a></li> 
+              <li><a href="selection-sort">Selection Sort</a></li> 
+              <li><a href="shell-sort">Shell Sort</a></li> 
+              <li><a href="bitonic-sort">Bitonic Sort</a></li> 
+              <li><a href="cocktail-sort">Cocktail Sort</a></li> 
+              <li><a href="cycle-sort">Cycle Sort</a></li> 
+              <li><a href="tim-sort">Tim Sort</a></li> 
+             </ul> 
+             <p><strong>Interview Questions</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="data-structure-interview-questions">DS Interview Questions</a></li> 
+             </ul> 
+            </div> 
+            <div class="col-2"> 
+             <p><strong>Singly Linked List Programs</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="program-to-create-and-display-a-singly-linked-list">Program to create and display a singly linked list</a></li> 
+              <li><a href="program-to-create-a-singly-linked-list-of-n-nodes-and-count-the-number-of-nodes">Program to create a singly linked list of n nodes and count the number of nodes</a></li> 
+              <li><a href="program-to-create-a-singly-linked-list-of-n-nodes-and-display-it-in-reverse-order">Program to create a singly linked list of n nodes and display it in reverse order</a></li> 
+              <li><a href="program-to-delete-a-new-node-from-the-beginning-of-the-singly-linked-list">Program to delete a new node from the beginning of the singly linked list</a></li> 
+              <li><a href="program-to-delete-a-new-node-from-the-middle-of-the-singly-linked-list">Program to delete a new node from the middle of the singly linked list</a></li> 
+              <li><a href="program-to-delete-a-node-from-the-end-of-the-singly-linked-list">Program to delete a node from the end of the singly linked list</a></li> 
+              <li><a href="program-to-determine-whether-a-singly-linked-list-is-the-palindrome">Program to determine whether a singly linked list is the palindrome</a></li> 
+              <li><a href="program-to-find-the-maximum-and-minimum-value-node-from-a-singly-linked-list">Program to find the maximum and minimum value node from a singly linked list</a></li> 
+              <li><a href="program-to-insert-a-new-node-at-the-middle-of-the-singly-linked-list">Program to insert a new node at the middle of the singly linked list</a></li> 
+              <li><a href="program-to-insert-a-new-node-at-the-beginning-of-the-singly-linked-list">Program to insert a new node at the beginning of the singly linked list</a></li> 
+              <li><a href="program-to-insert-a-new-node-at-the-end-of-the-singly-linked-list">Program to insert a new node at the end of the singly linked list</a></li> 
+              <li><a href="program-to-remove-duplicate-elements-from-a-singly-linked-list">Program to remove duplicate elements from a singly linked list</a></li> 
+              <li><a href="program-to-search-an-element-in-a-singly-linked-list">Program to search an element in a singly linked list</a></li> 
+              <li><a href="program-to-sort-the-elements-of-the-singly-linked-list">Program to sort the elements of the singly linked list</a></li> 
+              <li><a href="program-to-swap-nodes-in-a-singly-linked-list-without-swapping-data">Program to swap nodes in a singly linked list without swapping data</a></li> 
+              <li><a href="program-to-swap-the-last-element-of-the-singly-linked-list-from-the-first-one">Program to swap the last element of the singly linked list from the first one</a></li> 
+             </ul> 
+             <p><strong>Doubly Linked List Programs</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="program-to-convert-a-given-binary-tree-to-doubly-linked-list">Program to Convert a Given Binary Tree to Doubly Linked List</a></li> 
+              <li><a href="program-to-create-a-doubly-linked-list-from-a-ternary-tree">Program to Create a Doubly Linked List From a Ternary Tree</a></li> 
+              <li><a href="program-to-create-a-doubly-linked-list-of-n-nodes-and-count-the-number-of-nodes">Program to Create a Doubly Linked List of N Nodes and Count the Number of Nodes</a></li> 
+              <li><a href="program-to-create-a-doubly-linked-list-of-n-nodes-and-display-it-in-reverse-order">Program to Create a Doubly Linked List of N Nodes and Display it in Reverse Order</a></li> 
+              <li><a href="program-to-create-and-display-a-doubly-linked-list">Program to Create and Display a Doubly Linked List</a></li> 
+              <li><a href="program-to-delete-a-new-node-from-the-beginning-of-the-doubly-linked-list">Program to Delete a New Node From the Beginning of the Doubly Linked List</a></li> 
+              <li><a href="program-to-delete-a-new-node-from-the-end-of-the-doubly-linked-list">Program to Delete a New Node From the End of the Doubly Linked List</a></li> 
+              <li><a href="program-to-delete-a-new-node-from-the-middle-of-the-doubly-linked-list">Program to Delete a New Node From the Middle of the Doubly Linked List</a></li> 
+              <li><a href="program-to-find-the-maximum-and-minimum-value-node-from-a-doubly-linked-list">Program to Find the Maximum and Minimum Value Node From a Doubly Linked List</a></li> 
+              <li><a href="program-to-insert-a-new-node-at-the-beginning-of-the-doubly-linked-list">Program to Insert a New Node at the Beginning of the Doubly Linked List</a></li> 
+              <li><a href="program-to-insert-a-new-node-at-the-end-of-doubly-linked-list">Program to Insert a New Node at the End of Doubly Linked List</a></li> 
+              <li><a href="program-to-insert-a-new-node-at-the-middle-of-doubly-linked-list">Program to Insert a New Node at the Middle of Doubly Linked List</a></li> 
+              <li><a href="program-to-remove-duplicate-elements-from-a-doubly-linked-list">Program to Remove Duplicate Elements From a Doubly Linked List</a></li> 
+              <li><a href="program-to-rotate-doubly-linked-list-by-n-nodes">Program to Rotate Doubly Linked List by N Nodes</a></li> 
+              <li><a href="program-to-search-an-element-in-a-doubly-linked-list">Program to Search an Element in a Doubly Linked List</a></li> 
+              <li><a href="program-to-sort-the-elements-of-the-doubly-linked-list">Program to Sort the Elements of the Doubly Linked List</a></li> 
+             </ul> 
+             <p><strong>Circular Linked List Programs</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="program-to-create-a-circular-linked-list-of-n-nodes-and-count-the-number-of-nodes">Program to Create a Circular Linked List of N Nodes and Count the Number of Nodes</a></li> 
+              <li><a href="program-to-create-a-circular-linked-list-of-n-nodes-and-display-it-in-reverse-order">Program to Create a Circular Linked List of N Nodes and Display it in Reverse Order</a></li> 
+              <li><a href="program-to-create-and-display-a-circular-linked-list">Program to Create and Display a Circular Linked List</a></li> 
+              <li><a href="program-to-delete-a-new-node-from-the-beginning-of-the-circular-linked-list">Program to Delete a New Node From the Beginning of the Circular Linked List</a></li> 
+              <li><a href="program-to-delete-a-new-node-from-the-end-of-the-circular-linked-list">Program to Delete a New Node From the End of the Circular Linked List</a></li> 
+              <li><a href="program-to-delete-a-new-node-from-the-middle-of-the-circular-linked-list">Program to Delete a New Node From the Middle of the Circular Linked List</a></li> 
+              <li><a href="program-to-find-the-maximum-and-minimum-value-node-from-a-circular-linked-list">Program to Find the Maximum and Minimum Value Node From a Circular Linked List</a></li> 
+              <li><a href="program-to-insert-a-new-node-at-the-beginning-of-the-circular-linked-list">Program to Insert a New Node at the Beginning of the Circular Linked List</a></li> 
+              <li><a href="program-to-insert-a-new-node-at-the-end-of-the-circular-linked-list">Program to Insert a New Node at the End of the Circular Linked List</a></li> 
+              <li><a href="program-to-insert-a-new-node-at-the-middle-of-the-circular-linked-list">Program to Insert a New Node at the Middle of the Circular Linked List</a></li> 
+              <li><a href="program-to-remove-duplicate-elements-from-a-circular-linked-list">Program to Remove Duplicate Elements From a Circular Linked List</a></li> 
+              <li><a href="program-to-search-an-element-in-a-circular-linked-list">Program to Search an Element in a Circular Linked List</a></li> 
+              <li><a href="program-to-sort-the-elements-of-the-circular-linked-list">Program to Sort the Elements of the Circular Linked List</a></li> 
+             </ul> 
+             <p><strong>Tree Programs</strong></p> 
+             <ul class="pointsa"> 
+              <li><a href="program-to-calculate-the-difference-between-the-sum-of-the-odd-level-and-even-level-nodes-of-a-binary-tree">Program to Calculate the Difference Between the Sum of the Odd Level and Even Level Nodes of a Binary Tree</a></li> 
+              <li><a href="program-to-construct-a-binary-search-tree-and-perform-deletion-and-inorder-traversal">Program to Construct a Binary Search Tree and Perform Deletion and Inorder Traversal</a></li> 
+              <li><a href="program-to-convert-binary-tree-to-binary-search-tree">Program to Convert Binary Tree to Binary Search Tree</a></li> 
+              <li><a href="program-to-determine-whether-all-leaves-are-at-same-level">Program to Determine Whether all Leaves are at Same Level</a></li> 
+              <li><a href="program-to-determine-whether-two-trees-are-identical">Program to Determine Whether two Trees are Identical</a></li> 
+              <li><a href="program-to-find-maximum-width-of-a-binary-tree">Program to Find Maximum Width of a Binary Tree</a></li> 
+              <li><a href="program-to-find-the-largest-element-in-a-binary-tree">Program to Find the Largest Element in a Binary Tree</a></li> 
+              <li><a href="program-to-find-the-maximum-depth-or-height-of-a-tree">Program to Find the Maximum Depth or Height of a Tree</a></li> 
+              <li><a href="program-to-find-the-nodes-which-are-at-the-maximum-distance-in-a-binary-tree">Program to Find the Nodes Which are at the Maximum Distance in a Binary Tree</a></li> 
+              <li><a href="program-to-find-the-smallest-element-in-a-binary-tree">Program to Find the Smallest Element in a Binary Tree</a></li> 
+              <li><a href="program-to-find-the-sum-of-all-the-nodes-of-a-binary-tree">Program to Find the Sum of all the Nodes of a Binary Tree</a></li> 
+              <li><a href="program-to-find-the-total-number-of-possible-binary-search-trees-with-n-keys">Program to Find the Total Number of Possible Binary Search Trees with N Keys</a></li> 
+              <li><a href="program-to-implement-binary-tree-using-the-linked-list">Program to Implement Binary Tree using the Linked List</a></li> 
+              <li><a href="program-to-search-a-node-in-a-binary-tree">Program to Search a Node in a Binary Tree</a></li> 
+             </ul> 
+            </div>
+           </div> 
+           <hr> <h2 class="h2">Prerequisite</h2> <p>Before learning Data Structure, you must have the basic knowledge of C.</p> <h2 class="h2">Audience</h2> <p>Our Data Structure tutorial is designed to help beginners and professionals.</p> <h2 class="h2">Problem</h2> <p>We assure that you will not find any problem in this Data Structure tutorial. But if there is any mistake, please post it in the contact form.</p> 
+           <hr> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="data-structure-introduction">Data Structure Introduction</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:right" class="next" href="data-structure-introduction">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr>
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="47212222232526242c072d2631263337282e29336924282a">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/data-structure-tutorial"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/data-structure-tutorial"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/data-structure-tutorial"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69e84b69c9780978286999f9882d895999b">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="157d67557f74637461657a7c7b613b767a783b">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Java main() method - Javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Java main() method - Javatpoint">
+  <meta property="og:description" content="Java main() method with oops, string, exceptions, multithreading, collections, jdbc, rmi, fundamentals, programs, swing, javafx, io streams, networking, sockets, classes, objects etc,"> 
+  <meta name="keywords" content="java, main, method, oops, string, exceptions, multithreading, collections, jdbc, rmi, fundamentals, programs, swing">
+  <meta name="description" content="Java main() method with oops, string, exceptions, multithreading, collections, jdbc, rmi, fundamentals, programs, swing, javafx, io streams, networking, sockets, classes, objects etc,">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/java-main-method"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Java main() method - Javatpoint">
+  <meta name="twitter:description" property="og:description" content="Java main() method with oops, string, exceptions, multithreading, collections, jdbc, rmi, fundamentals, programs, swing, javafx, io streams, networking, sockets, classes, objects etc,">
+  <meta property="og:url" content="https://www.javatpoint.com/java-main-method">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div id="smoothmenu1" class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/icon/home.png" alt="home"> Home</a></li> 
+       <li><a href="java-tutorial" class="selected"><img src="https://static.javatpoint.com/images/icon/java.png" alt="java"> Java</a></li> 
+       <li><a href="java-programs"><img src="https://static.javatpoint.com/images/icon/java-program.png" alt="java programs"> Programs</a></li> 
+       <li><a href="java-oops-concepts"><img src="https://static.javatpoint.com/images/icon/oops.png" alt="oops"> OOPs</a></li> 
+       <li><a href="java-string"><img src="https://static.javatpoint.com/images/icon/string.png" alt="String"> String</a></li> 
+       <li><a href="exception-handling-in-java"><img src="https://static.javatpoint.com/images/icon/exception.png" alt="Exception"> Exception</a></li> 
+       <li><a href="multithreading-in-java"><img src="https://static.javatpoint.com/images/icon/multithreading.png" alt="Multithreading"> Multithreading</a></li> 
+       <li><a href="collections-in-java"><img src="https://static.javatpoint.com/images/icon/collection.png" alt="Collections"> Collections</a></li> 
+       <li><a href="javafx-tutorial"><img src="https://static.javatpoint.com/images/icon/javafx.png" alt="javafx"> JavaFX</a></li> 
+       <li><a href="jsp-tutorial"><img src="https://static.javatpoint.com/images/icon/jsp.png" alt="jsp"> JSP</a></li> 
+       <li><a href="spring-tutorial"><img src="https://static.javatpoint.com/images/icon/spring.png" alt="spring"> Spring</a></li> 
+       <li><a href="spring-boot-tutorial"><img src="https://static.javatpoint.com/images/icon/spring-boot.png" alt="Spring Boot"> Spring Boot</a></li> 
+       <li><a href="free-java-projects"><img src="https://static.javatpoint.com/images/icon/projects.png" alt="Projects"> Projects</a></li> 
+       <li><a href="corejava-interview-questions"><img src="https://static.javatpoint.com/images/icon/interview.png" alt="interview questions"> Interview Questions</a> </li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div> 
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> <a href="java-tutorial"><span>Basics of Java </span></a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Java Misc</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="java-main-method" class="l1">Java Main Method</a> <a href="system-out-println-in-java" class="l1">System.out.println()</a> <a href="memory-management-in-java" class="l1">Java Memory Management</a> <a href="classloader-in-java" class="l1">Java ClassLoader</a> <a href="java-heap" class="l1">Java Heap</a> <a href="java-decompiler" class="l1">Java Decompiler</a> <a href="java-uuid" class="l1">Java UUID</a> <a href="java-jre" class="l1">Java JRE</a> <a href="java-se" class="l1">Java SE</a> <a href="java-ee" class="l1">Java EE</a> <a href="java-me" class="l1">Java ME</a> <a href="java-vs-javascript" class="l1">Java vs. JavaScript</a> <a href="java-vs-kotlin" class="l1">Java vs. Kotlin</a> <a href="java-vs-python" class="l1">Java vs. Python</a> <a href="java-absolute-value" class="l1">Java Absolute Value</a> <a href="how-to-create-a-file-in-java" class="l1">How to Create File</a> <a href="how-to-delete-a-file-in-java">Delete a File in Java</a> <a href="how-to-open-a-file-in-java">Open a File in Java</a> <a href="how-to-sort-a-list-in-java">Sort a List in Java</a> <a href="how-to-convert-byte-array-to-string-in-java">Convert byte Array to String</a> <a href="java-basics">Java Basics</a> <a href="how-to-compile-and-run-java-program">How to Compile &amp; Run Java Program</a> <a href="how-to-run-java-program-in-eclipse">How to Run Java Program in Eclipse</a> <a href="how-to-verify-java-version">How to Verify Java Version</a> <a href="how-many-ways-to-create-an-object-in-java">Ways to Create an Object in Java</a> <a href="how-to-run-a-java-program-in-windows-10">How to Run a Java program in Windows 10</a> <a href="runnable-interface-in-java">Runnable Interface in Java</a> <a href="how-to-reserve-a-string-in-java-without-using-reverse-function">Reserve String without reverse() function</a> <a href="how-to-reverse-a-string-in-java-word-by-word">Reverse String in Java Word by Word</a> <a href="java-keystore">Java Keystore</a> <a href="how-to-get-input-from-user-in-java">Get input from user in Java</a> <a href="how-to-read-file-line-by-line-in-java">Read file line by line in Java</a> <a href="how-to-take-string-input-in-java">Take String input in Java</a> <a href="how-to-read-excel-file-in-java">How to Read Excel File in Java</a> <a href="how-to-read-xml-file-in-java">Read XML File in Java</a> <a href="completablefuture-in-java">CompletableFuture in Java</a> <a href="java-executorservice">Java ExecutorService</a> <a href="how-to-iterate-map-in-java">How to iterate Map in Java</a> <a href="how-to-return-an-array-in-java">How to Return an Array in Java</a> <a href="how-to-sort-hashmap-by-value">How to Sort HashMap by Value</a> <a href="how-to-sort-hashmap-in-java">How to Sort HashMap in Java</a> <a href="load-factor-in-hashmap">Load Factor in HashMap</a> <a href="difference-between-array-and-arraylist">Array vs ArrayList</a> <a href="difference-between-hashmap-and-treemap">HashMap vs TreeMap</a> <a href="difference-between-hashset-and-hashmap">HashSet vs HashMap class</a> <a href="how-to-compare-two-arraylist-in-java">Compare Two ArrayList in Java</a> <a href="how-to-merge-two-arrays-in-java">Merge Two Arrays in Java</a> <a href="how-to-print-array-in-java">Print Array in Java</a> <a href="how-to-read-csv-file-in-java">Read CSV File in Java</a> <a href="how-to-remove-special-characters-from-string-in-java">Remove Special Characters from String</a> <a href="arrayindexoutofboundsexception-in-java">ArrayIndexOutOfBoundsException</a> <a href="concurrentmodificationexception-in-java">ConcurrentModificationException</a> <a href="nosuchelementexception-in-java">NoSuchElementException</a> <a href="numberformatexception-in-java">NumberFormatException</a> 
+      <hr> <a href="how-to-sort-arraylist-in-java">How to Sort ArrayList in Java</a> <a href="java-stack">Java Stack</a> <a href="how-to-create-object-in-java">How to Create Object in Java</a> <a href="how-to-print-ascii-value-in-java">How to Print ASCII Value in Java</a> <a href="how-to-generate-random-number-in-java">How to Generate Random Number in Java</a> <a href="how-to-sort-an-array-in-java">How to Sort an Array in Java</a> <a href="how-to-download-java">How to Download Java</a> <a href="how-to-compare-two-objects-in-java">How to Compare Two Objects in Java</a> <a href="how-to-call-a-method-in-java">How to Call a Method in Java</a> <a href="how-to-print-pattern-in-java">How to Print Pattern in Java</a> <a href="how-to-create-singleton-class-in-java">How to Create Singleton Class in Java</a> <a href="how-to-find-array-length-in-java">How to Find Array Length in Java</a> <a href="how-to-read-character-in-java">How to Read Character in Java</a> <a href="how-to-reverse-a-number-in-java">How to Reverse a Number in Java</a> <a href="can-we-overload-main-method-in-java">Can We Overload main() Method in Java</a> <a href="how-to-convert-char-array-to-string-in-java">How to Convert Char Array to String in Java</a> <a href="how-to-run-java-program-in-cmd-using-notepad">How to Run Java Program in CMD Using Notepad</a> <a href="how-to-sort-string-array-in-java">How to Sort String Array in Java</a> <a href="how-to-compare-dates-in-java">How to Compare Dates in Java</a> <a href="how-to-take-multiple-string-input-in-java-using-scanner">How to Take Multiple String Input in Java Using Scanner</a> <a href="how-to-remove-last-character-from-string-in-java">How to Remove Last Character from String in Java</a> <a href="how-treemap-works-internally-in-java">How TreeMap Works Internally in Java</a> <a href="java-program-to-find-sum-of-natural-numbers">Java Program to Find Sum of Natural Numbers</a> <a href="java-program-to-display-alternate-prime-numbers">Java Program to Display Alternate Prime Numbers</a> <a href="java-program-to-find-square-root-of-a-number-without-sqrt-method">Java Program to Find Square Root of a Number Without sqrt Method</a> <a href="java-program-to-swap-two-numbers-using-bitwise-operator">Java Program to Swap Two Numbers Using Bitwise Operator</a> <a href="java-program-to-break-integer-into-digits">Java Program to Break Integer into Digits</a> <a href="java-program-to-find-gcd-of-two-numbers">Java Program to Find GCD of Two Numbers</a> <a href="java-program-to-find-largest-of-three-numbers">Java Program to Find Largest of Three Numbers</a> <a href="java-program-to-calculate-area-and-circumference-of-circle">Java Program to Calculate Area and Circumference of Circle</a> <a href="java-program-to-check-if-a-number-is-positive-or-negative">Java Program to Check if a Number is Positive or Negative</a> <a href="java-program-to-find-smallest-of-three-numbers-using-ternary-operator">Java Program to Find Smallest of Three Numbers Using Ternary Operator</a> <a href="what-is-diamond-problem-in-java">What is Diamond Problem in Java</a> <a href="java-program-to-check-if-a-given-number-is-perfect-square">Java Program to Check if a Given Number is Perfect Square</a> <a href="java-program-to-display-even-numbers-from-1-to-100">Java Program to Display Even Numbers From 1 to 100</a> <a href="java-program-to-display-odd-numbers-from-1-to-100">Java Program to Display Odd Numbers From 1 to 100</a> <a href="java-program-to-read-number-from-standard-input">Java Program to Read Number from Standard Input</a> <a href="how-to-download-minecraft-java-edition">How to Download Minecraft Java Edition</a> <a href="can-we-override-static-method-in-java">Can We Override Static Method in Java</a> <a href="how-to-avoid-deadlock-in-java">How to Avoid Deadlock in Java</a> <a href="how-to-achieve-abstraction-in-java">How to Achieve Abstraction in Java</a> <a href="how-garbage-collection-works-in-java">How Garbage Collection Works in Java</a> <a href="how-to-take-array-input-in-java">How to Take Array Input in Java</a> <a href="how-to-create-array-of-objects-in-java">How to Create Array of Objects in Java</a> <a href="how-to-create-package-in-java">How to Create Package in Java</a> <a href="how-to-print-in-java">How to Print in Java</a> <a href="what-is-framework-in-java">What is Framework in Java</a> <a href="why-java-is-secure">Why Java is Secure</a> <a href="how-to-iterate-list-in-java">How to Iterate List in Java</a> <a href="how-to-use-eclipse-for-java">How to Use Eclipse for Java</a> <a href="which-package-is-imported-by-default-in-java">Which Package is Imported by Default in Java</a> <a href="could-not-find-or-load-main-class-in-java">Could Not Find or Load Main Class in Java</a> <a href="how-to-compare-two-arrays-in-java">How to Compare Two Arrays in Java</a> <a href="how-to-convert-string-to-json-object-in-java">How to Convert String to JSON Object in Java</a> <a href="which-is-better-java-or-python">Which is Better Java or Python</a> <a href="how-to-update-java">How to Update Java</a> <a href="difference-between-c-and-java">C vs Java</a> <a href="how-to-get-value-from-json-object-in-java-example">How to Get Value from JSON Object in Java Example</a> <a href="how-to-split-a-string-in-java-with-delimiter">How to Split a String in Java with Delimiter</a> <a href="structure-of-java-program">Structure of Java Program</a> <a href="why-we-use-constructor-in-java">Why We Use Constructor in Java</a> <a href="java-create-excel-file">Java Create Excel File</a> <a href="java-interpreter">Java Interpreter</a> <a href="javac-is-not-recognized">javac is not Recognized</a> <a href="dynamic-array-in-java">Dynamic Array in Java</a> <a href="shunting-yard-algorithm-in-java">Shunting yard algorithm</a> <a href="java-destructor">Java Destructor</a> <a href="custom-arraylist-in-java">Custom ArrayList in Java</a> <a href="arraylist-vs-hashmap-in-java">ArrayList vs HashMap</a> <a href="java-constant">Java Constant</a> <a href="java-tokens">Java Tokens</a> <a href="java-xmx">Java Xmx</a> <a href="how-to-enable-java-in-chrome">How to Enable Java in Chrome</a> <a href="java-semaphore">Java Semaphore</a> <a href="java-array-to-list">Array to List in Java</a> <a href="jit-in-java">JIT in Java</a> <a href="how-to-clear-screen-in-java">How to Clear Screen in Java</a> <a href="java-ides">Java IDEs</a> <a href="java-logger">Java Logger</a> <a href="reverse-a-string-using-recursion-in-java">Reverse a String Using Recursion in Java</a> <a href="java-path-vs-file">Java Path Vs File</a> <a href="float-vs-double-java">Float Vs Double Java</a> <a href="stack-vs-heap-java">Stack vs Heap Java</a> <a href="abstraction-vs-encapsulation-in-java">Abstraction vs Encapsulation</a> <a href="top-10-java-books">Top 10 Java Books</a> <a href="public-vs-private-java">Public vs Private</a> <a href="what-is-java-used-for">What is Java Used For</a> <a href="bitwise-operator-in-java">Bitwise Operator in Java</a> <a href="solid-principles-java">SOLID Principles Java</a> <a href="type-casting-in-java">Type Casting in Java</a> <a href="conditional-operator-in-java">Conditional Operator in Java</a> <a href="ternary-operator-in-java">Ternary Operator Java</a> <a href="java-architecture">Java Architecture</a> <a href="read-eval-print-loop-in-java">REPL in Java</a> <a href="types-of-exception-in-java">Types of Exception in Java</a> <a href="why-string-is-immutable-or-final-in-java">Why String is Immutable or Final in Java</a> <a href="java-vs-kotlin">Java vs Kotlin</a> <a href="set-in-java">Set in Java</a> <a href="why-non-static-variable-cannot-be-referenced-from-a-static-context-in-java">Why non-static variable cannot be referenced from a static context in Java</a> <a href="java-developer-roles-and-responsibilities">Java Developer Roles and Responsibilities</a> <a href="types-of-classes-in-java">Types of Classes in Java</a> <a href="marker-interface-in-java">Marker Interface in Java</a> <a href="static-function-in-java">Static Function in Java</a> <a href="unary-operators-in-java">Unary Operators in Java</a> <a href="what-is-advance-java">What is Advance Java</a> <a href="arraylist-implementation-in-java">ArrayList Implementation</a> <a href="convert-arraylist-to-string-array-in-java">Convert ArrayList to String Array</a> <a href="hashmap-vs-concurrenthashmap-in-java">Hashmap vs ConcurrentHashMap</a> <a href="list-vs-arraylist-in-java">List vs ArrayList</a> <a href="map-and-hashmap-in-java">Map vs HashMap</a> <a href="hashset-vs-linkedhashset-in-java">HashSet vs LinkedHashSet</a> <a href="how-treeset-works-internally-in-java">How TreeSet Works Internally</a> <a href="linkedhashmap-vs-hashmap-in-java">LinkedHashMap vs HashMap</a> <a href="java-program-to-solve-quadratic-equation">Java Program to Solve Quadratic Equation</a> <a href="scope-resolution-operator-in-java">Scope Resolution Operator in Java</a> <a href="composition-in-java">Composition in Java</a> <a href="file-operations-in-java">File Operations in Java</a> <a href="noclassdeffounderror-in-java">NoClassDefFoundError in Java</a> <a href="thread-concept-in-java">Thread Concept in Java</a> <a href="upcasting-and-downcasting-in-java">Upcasting and Downcasting in Java</a> <a href="dynamic-polymorphism-in-java">Dynamic Polymorphism in Java</a> <a href="java-robot">Java Robot</a> <a href="string-pool-in-java">String Pool in Java</a> <a href="what-is-constructor-chaining-in-java">What is constructor chaining in Java</a> <a href="add-elements-to-array-in-java">Add elements to Array in Java</a> <a href="advantages-and-disadvantages-of-java">Advantages and disadvantages of Java</a> <a href="advantages-of-javabeans">Advantages of JavaBeans</a> <a href="aws-sdk-for-java-with-apache-maven">AWS SDK for Java with Apache Maven</a> <a href="awt-and-swing-in-java">AWT and Swing in Java</a> <a href="awt-program-in-java">AWT Program in Java</a> <a href="boolean-values-in-java">Boolean values in Java</a> <a href="bytestream-classes-in-java">ByteStream Classes in Java</a> <a href="characterstream-classes-in-java">CharacterStream Classes in Java</a> <a href="class-and-interface-in-java">Class and Interface in Java</a> <a href="classcast-exception-in-java">ClassCast Exception in Java</a> <a href="cloneable-in-java">Cloneable in Java</a> <a href="constructor-overloading-in-java">Constructor overloading in Java</a> <a href="control-flow-in-java">Control Flow in Java</a> <a href="convert-java-object-to-json-using-gson">Convert Java Object to Json using GSON</a> <a href="convert-xml-to-json-in-java">Convert XML to JSON in Java</a> <a href="how-to-avoid-null-pointer-exception-in-java">How to avoid null pointer exception in Java</a> <a href="java-constructor-returns-a-value-but-what">Java constructor returns a value, but what</a> <a href="singleton-class-in-java">Singleton Class in Java</a> <a href="doubly-linked-list-program-in-java">Doubly Linked List Program in Java</a> <a href="java-12">Java 12</a> <a href="association-in-java">Association in Java</a> <a href="big-data-java-vs-python">Big data Java vs Python</a> <a href="branching-statements-in-java">Branching Statements in Java</a> <a href="collections-sort-in-java-8">Collections Sort in Java 8</a> <a href="list-vs-set-in-java">List vs Set in Java</a> <a href="how-many-days-required-to-learn-java">How many days required to learn Java</a> <a href="implicitly-typecasting-in-java">Implicitly Typecasting in Java</a> <a href="legacy-class-in-java">Legacy Class in Java</a> <a href="character-array-in-java">Character Array in Java</a> <a href="equals-and-hashcode-in-java">Equals() and Hashcode() in Java</a> <a href="externalization-in-java">Externalization in Java</a> <a href="identifiers-in-java">Identifiers in Java</a> <a href="invocationtargetexception">InvocationTargetException</a> <a href="java-pass-by-value">Java Pass by Value</a> <a href="mutable-and-immutable-in-java">Mutable and Immutable in Java</a> <a href="pojo-in-java">POJO</a> <a href="power-function-in-java">Power Function in Java</a> <a href="primitive-data-types-in-java">Primitive Data Types in Java</a> <a href="string-array-in-java">String Array in Java</a> <a href="virtual-function-in-java">Virtual Function in Java</a> <a href="c-vs-cpp-vs-java">C vs C++ vs Java</a> <a href="java-string-max-size">Java String Max Size</a> <a href="nth-prime-number-java">nth Prime Number Java</a> <a href="convert-java-object-to-json">Convert Java object to JSON</a> <a href="how-to-calculate-date-difference-in-java">How to Calculate Date Difference in Java</a> <a href="how-to-improve-coding-skills-in-java">How to Improve Coding Skills in Java</a> <a href="java-email-validation">Java Email Validation</a> <a href="java-testing-tools">Java Testing Tools</a> <a href="permutation-and-combination-in-java">Permutation and Combination in Java</a> <a href="javacc">JavaCC</a> <a href="unique-number-in-java-program">Unique Number in Java Program</a> <a href="jdbc-mcq">JDBC MCQ</a> <a href="oops-mcq">OOPs MCQ</a> <a href="java-code-for-des">Java Code for DES</a> <a href="pig-latin-program-in-java">Pig Latin Program in Java</a> <a href="array-rotation-in-java">Array Rotation in Java</a> <a href="equilibrium-index-of-an-array-in-java">Equilibrium Index of an Array in Java</a> <a href="different-ways-to-print-exception-message-in-java">Different Ways to Print Exception Message in Java</a> <a href="java-copy-constructor-example">Java Copy Constructor Example</a> <a href="why-we-use-static-class-in-java">Why We Use Static Class in Java</a> <a href="what-is-core-java">What is Core Java</a> <a href="set-vs-map-in-java">Set vs Map in Java</a> <a href="how-to-create-a-new-folder-in-java">How to Create a New Folder in Java</a> <a href="remove-an-element-from-arraylist-in-java">Remove an Element from ArrayList in Java</a> <a href="how-to-create-test-cases-for-exceptions-in-java">How to Create Test Cases for Exceptions in Java</a> <a href="how-to-convert-json-array-to-arraylist-in-java">How to Convert JSON Array to ArrayList in Java</a> <a href="how-to-create-a-class-file-in-java">How to Create a Class File in Java</a> <a href="java-spring-pros-and-cons">Java Spring Pros &amp; Cons</a> <a href="java-stack-trace">Java Stack Trace</a> <a href="array-slicing-in-java">Array Slicing in Java</a> <a href="flutter-vs-java">Flutter vs Java</a> <a href="permutation-of-numbers-in-java">Permutation of Numbers in Java</a> <a href="magic-number-in-java">Magic Number in Java</a> <a href="reference-data-types-in-java">Reference Data Types in Java</a> <a href="counter-variable-in-java">Counter variable in Java</a> <a href="how-to-take-character-input-in-java-using-bufferedreader-class">How to take Character Input in Java using BufferedReader Class</a> <a href="java-employee-details-program">Java employee details program</a> <a href="java-is-case-sensitive-explain">Java is case sensitive explain</a> <a href="ramanujan-number-or-taxicab-number-in-java">Ramanujan Number or Taxicab Number in Java</a> <a href="advanced-java-books-in-2021">Advanced Java Books in 2021</a> <a href="fail-fast-and-fail-safe-iterator-in-java">Fail Fast and Fail Safe Iterator in Java</a> <a href="how-to-build-a-web-application-using-java">How to build a Web Application Using Java</a> <a href="is-java-interpreted-or-compiled">Is Java Interpreted or Compiled</a> <a href="java-big-data-frameworks">Java Big Data Frameworks</a> <a href="java-get-data-from-url">Java Get Data From URL</a> <a href="no-main-manifest-attribute">No Main Manifest Attribute</a> <a href="java-missing-return-statement">Java missing return statement</a> <a href="java-program-to-remove-duplicate-characters-from-a-string">Java program to remove duplicate characters from a string</a> <a href="junit-test-case-example-in-java">JUnit test case example in Java</a> <a href="list-of-logical-programs-in-java">List of logical programs in Java</a> <a href="permgen-space-java">PermGen space Java</a> <a href="unsigned-right-shift-operator-in-java">Unsigned Right Shift Operator in Java</a> <a href="infix-to-postfix-java">Infix to Postfix Java</a> <a href="memory-leak-in-java">Memory Leak in Java</a> <a href="how-to-write-test-cases-in-java">How To Write Test Cases In Java</a> <a href="java-32-bit-download-for-windows-10">Java 32-Bit Download For Windows 10</a> <a href="fizzbuzz-program-in-java">FizzBuzz Program in Java</a> <a href="java-graph">Java Graph</a> <a href="java-runtime-environment-jre-or-jdk-must-be-available">A Java Runtime Environment JRE Or JDK Must Be Available</a> <a href="java-does-not-open">Java Does Not Open</a> <a href="no-java-virtual-machine-was-found">No Java Virtual Machine was Found</a> <a href="java-program-number-to-word">Java Program Number to Word</a> <a href="types-of-garbage-collector-in-java">Types of Garbage Collector in Java</a> <a href="no-suitable-driver-found-for-jdbc">No Suitable Driver Found For JDBC</a> <a href="avl-tree-program-in-java">AVL Tree program in Java</a> <a href="fail-fast-and-fail-safe-in-java">Fail-fast and Fail-safe in Java</a> <a href="find-unique-elements-in-array-java">Find unique elements in array Java</a> <a href="highest-precedence-in-java">Highest precedence in Java</a> <a href="java-closure">Java Closure</a> <a href="java-string-encoding">Java String Encoding</a> <a href="prims-algorithm-java">Prim's algorithm Java</a> <a href="quartz-scheduler-java">Quartz scheduler java</a> <a href="red-black-tree-java">Red Black Tree Java</a> <a href="gc-overhead-limit-exceeded">GC Overhead Limit Exceeded</a> <a href="generating-qr-code-in-java">Generating QR Code in Java</a> <a href="delegation-event-model-in-java">Delegation Event Model in Java</a> <a href="java-pair">Java Pair</a> <a href="java-profilers">Java Profilers</a> <a href="java-xor">Java XOR</a> <a href="java-flight-recorder">Java Flight Recorder</a> <a href="bucket-sort-in-java">Bucket Sort in Java</a> <a href="automorphic-number-program-in-java">Automorphic Number Program in Java</a> <a href="java-atomic">Java Atomic</a> <a href="wait-vs-sleep-in-java">Wait vs Sleep in Java</a> <a href="executor-framework-java">Executor Framework Java</a> <a href="gregorian-calendar-java">Gregorian calendar Java</a> <a href="int-vs-integer-java">int vs Integer Java</a> <a href="what-is-truncation-in-java">What is truncation in Java</a> <a href="peterson-number-in-java">Peterson Number in Java</a> <a href="sunny-number-in-java">Sunny Number in Java</a> <a href="tech-number-in-java">Tech Number in Java</a> <a href="java-http-proxy-server">Java HTTP Proxy Server</a> <a href="java-static-constructor">Java Static Constructor</a> <a href="how-to-prepare-for-java-interview">How to prepare for Java Interview</a> <a href="java-callback-function">Java callback function</a> <a href="java-8-vs-java-11">Java 8 vs Java 11</a> <a href="login-form-java">Login Form Java</a> <a href="vaadin-framework-java">Vaadin Framework Java</a> <a href="ejb-vs-spring">EJB vs. Spring</a> <a href="fascinating-number-in-java">Fascinating Number in Java</a> <a href="keith-number-in-java">Keith Number in Java</a> <a href="neon-number-in-java">Neon Number in Java</a> <a href="spy-number-in-java">Spy Number in Java</a> <a href="types-of-applets-in-java">Types of Applets in Java</a> <a href="visitor-design-pattern-java">Visitor Design Pattern Java</a> <a href="advantages-of-python-over-java">Advantages of Python over Java</a> <a href="atm-program-java">ATM program Java</a> <a href="design-principles-in-java">Design Principles in Java</a> <a href="json-validator-java">JSON Validator Java</a> <a href="pseudocode-java">Pseudocode Java</a> <a href="autobiographical-number-in-java">Autobiographical Number in Java</a> <a href="emirp-number-in-java">Emirp Number in Java</a> <a href="sphenic-number-in-java">Sphenic Number in Java</a> <a href="windows-programming-using-java">Windows Programming Using Java</a> <a href="buzz-number-java">Buzz Number Java</a> <a href="duck-number-java">Duck Number Java</a> <a href="evil-number-java">Evil Number Java</a> <a href="isbn-number-java">ISBN Number Java</a> <a href="krishnamurthy-number-java">Krishnamurthy Number Java</a> <a href="vertx-java">Vert.x Java</a> <a href="bouncy-number-in-java">Bouncy Number in Java</a> <a href="mystery-number-in-java">Mystery Number in Java</a> <a href="smith-number-in-java">Smith Number in Java</a> <a href="strontio-number-in-java">Strontio Number in Java</a> <a href="xylem-and-phloem-number-in-java">Xylem and Phloem Number in Java</a> <a href="complex-java-programs">Complex Java Programs</a> <a href="ore-number-java">ORE Number Java</a> <a href="palprime-number-java">PalPrime Number Java</a> <a href="twin-prime-numbers">Twin Prime Numbers</a> <a href="twisted-prime-number-java">Twisted Prime Number Java</a> <a href="ugly-number-java">Ugly number Java</a> <a href="achilles-number-in-java">Achilles Number in Java</a> <a href="amicable-pair-number-in-java">Amicable Pair Number in Java</a> <a href="playfair-cipher-program-in-java">Playfair Cipher Program in Java</a> <a href="java-lang-outofmemoryerror-java-heap-space">Java.lang.outofmemoryerror: java heap space</a> <a href="bankers-algorithm-java">Banker's Algorithm Java</a> <a href="kruskal-algorithm-java">Kruskal Algorithm Java</a> <a href="longest-common-subsequence-in-java">Longest Common Subsequence</a> <a href="travelling-salesman-problem-in-java">Travelling Salesman Problem</a> <a href="bitwise-and-vs-logical-and-in-java">&amp; vs &amp;&amp; in Java</a> <a href="jumping-number-in-java">Jumping Number in Java</a> <a href="lead-number-in-java">Lead Number in Java</a> <a href="lucky-number-in-java">Lucky Number in Java</a> <a href="middle-digit-number-in-java">Middle Digit Number in Java</a> <a href="special-number-in-java">Special Number in Java</a> <a href="passing-array-to-function-in-java">Passing Array to Function In Java</a> <a href="java-error">Java Error</a> <a href="java-apps">Java Apps</a> <a href="lexicographical-order-java">Lexicographical Order Java</a> <a href="adam-number-in-java">Adam Number in Java</a> <a href="bell-number-in-java">Bell Number in Java</a> <a href="reduce-java">Reduce Java</a> <a href="lru-cache-implementation-in-java">LRU Cache Implementation</a> <a href="goldbach-number-in-java">Goldbach Number in Java</a> <a href="how-to-find-number-of-objects-created-in-java">How to Find Number of Objects Created in Java</a> <a href="multiply-two-numbers-without-using-arithmetic-operator-in-java">Multiply Two Numbers Without Using Arithmetic Operator in Java</a> <a href="sum-of-digits-of-a-number-in-java">Sum of Digits of a Number in Java</a> <a href="sum-of-numbers-in-java">Sum of Numbers in Java</a> <a href="power-of-a-number-in-java">Power of a Number in Java</a> <a href="sum-of-prime-numbers-in-java">Sum of Prime Numbers in Java</a> <a href="cullen-number-in-java">Cullen Number in Java</a> <a href="mobile-number-validation-in-java">Mobile Number Validation in Java</a> <a href="fermat-number-in-java">Fermat Number in Java</a> <a href="instantiation-in-java">Instantiation in Java</a> <a href="exception-vs-error-in-java">Exception Vs Error in Java</a> <a href="flatmap-method-in-java-8">flatMap() Method in Java 8</a> <a href="how-to-print-table-in-java">How to Print Table in Java</a> <a href="java-create-pdf">Java Create PDF</a> <a href="mersenne-number-in-java">Mersenne Number in Java</a> <a href="pandigital-number-in-java">Pandigital Number in Java</a> <a href="pell-number-in-java">Pell Number in Java</a> <a href="java-get-post">Java Get Post</a> <a href="fork-join-in-java">Fork Join in Java</a> <a href="java-callable-example">Java Callable Example</a> <a href="blockchain-java">Blockchain Java</a> <a href="design-of-jdbc">Design of JDBC</a> <a href="java-anon-proxy">Java Anon Proxy</a> <a href="knapsack-problem-java">Knapsack Problem Java</a> <a href="session-tracking-in-java">Session Tracking in Java</a> <a href="what-is-object-oriented-programming">What is Object-Oriented Programming</a> <a href="literals-in-java">Literals in Java</a> <a href="square-free-number-in-java">Square Free Number in Java</a> <a href="what-is-an-anagram-in-java">What is an anagram in Java</a> <a href="what-is-programming">What is programming</a> <a href="iterate-json-array-java">Iterate JSON Array Java</a> <a href="java-date-add-days">Java Date Add Days</a> <a href="java-plot">Java Plot</a> <a href="javac-command-not-found">Javac Command Not Found</a> <a href="factorial-program-in-java-using-while-loop">Factorial Program in Java Using while Loop</a> <a href="frugal-number-in-java">Frugal Number in Java</a> <a href="java-digital-signature">Java Digital Signature</a> <a href="catalan-number-in-java">Catalan Number in Java</a> <a href="partition-number-in-java">Partition Number in Java</a> <a href="powerful-number-in-java">Powerful Number in Java</a> <a href="practical-number-in-java">Practical Number in Java</a> <a href="chromatic-number-in-java">Chromatic Number in Java</a> <a href="sublime-number-in-java">Sublime Number in Java</a> <a href="advanced-java-viva-questions">Advanced Java Viva Questions</a> <a href="getter-and-setter-method-in-java-example">Getter and Setter Method in Java Example</a> <a href="how-to-convert-string-to-string-array-in-java">How to convert String to String array in Java</a> <a href="how-to-encrypt-password-in-java">How to Encrypt Password in Java</a> <a href="instance-variable-in-java">Instance Variable in Java</a> <a href="java-file-extension">Java File Extension</a> <a href="java-pi">Java Pi</a> <a href="java-pop">Java Pop</a> <a href="types-of-inheritance-in-java">Types of Inheritance in Java</a> <a href="untouchable-number-in-java">Untouchable Number in Java</a> <a href="aes-256-encryption-in-java">AES 256 Encryption in Java</a> <a href="applications-of-array-in-java">Applications of Array in Java</a> <a href="example-of-static-import-in-java">Example of Static Import in Java</a> <a href="hill-cipher-program-in-java">Hill Cipher Program in Java</a> <a href="lazy-loading-in-java">Lazy Loading in Java</a> <a href="rectangular-number-in-java">Rectangular Number in Java</a> <a href="how-to-print-table-in-java-using-formatter">How to Print Table in Java Using Formatter</a> <a href="identityhashmap-class-in-java">IdentityHashMap Class in Java</a> <a href="java-bf">Java BF</a> <a href="java-logo">Java Logo</a> <a href="undulating-number-in-java">Undulating Number in Java</a> <a href="java-obfuscator">Java Obfuscator</a> <a href="java-switch-string">Java Switch String</a> <a href="applet-life-cycle-in-java">Applet Life Cycle in Java</a> <a href="banking-application-in-java">Banking Application in Java</a> <a href="duodecimal-in-java">Duodecimal in Java</a> <a href="economical-number-in-java">Economical Number in Java</a> <a href="figurate-number-in-java">Figurate Number in Java</a> <a href="how-to-resolve-illegalstateexception-in-java">How to resolve IllegalStateException in Java</a> <a href="java-coding-software">Java Coding Software</a> <a href="java-create-jar-files">Java Create Jar Files</a> <a href="java-framework-list">Java Framework List</a> <a href="java-initialize-array">Java Initialize array</a> <a href="java-lang-exception-no-runnable-methods">java lang exception no runnable methods</a> <a href="java-queue">Java Queue</a> <a href="nonagonal-number-in-java">Nonagonal Number in Java</a> <a href="sexagesimalformatter-in-java">SexagesimalFormatter in Java</a> <a href="sierpinski-number-in-java">Sierpinski Number in Java</a> <a href="vigesimal-in-java">Vigesimal in Java</a> <a href="java-color-codes">Java Color Codes</a> <a href="jdoodle-java">JDoodle Java</a> <a href="online-java-compiler">Online Java Compiler</a> <a href="pyramidal-number-in-java">Pyramidal Number in Java</a> <a href="relatively-prime-in-java">Relatively Prime in Java</a> <a href="java-modulo">Java Modulo</a> <a href="repdigit-numbers-in-java">Repdigit Numbers in Java</a> <a href="abstract-method-in-java">Abstract Method in Java</a> <a href="convert-text-to-speech-in-java">Convert Text-to-Speech in Java</a> <a href="java-editors">Java Editors</a> <a href="mvc-architecture-in-java">MVC Architecture in Java</a> <a href="narcissistic-number-in-java">Narcissistic Number in Java</a> <a href="hashing-algorithm-in-java">Hashing Algorithm in Java</a> <a href="java-escape-characters">Java Escape Characters</a> <a href="java-operator-precedence">Java Operator Precedence</a> <a href="private-constructor-in-java">Private Constructor in Java</a> <a href="scope-of-variables-in-java">Scope of Variables in Java</a> <a href="groovy-vs-java">Groovy vs Java</a> <a href="java-file-upload-to-a-folder">Java File Upload to a Folder</a> <a href="java-full-stack">Java Full Stack</a> <a href="java-developer">Java Developer</a> <a href="thread-states-in-java">Thread States in Java</a> <a href="java-ee-vs-nodejs">Java EE vs Node.js</a> <a href="java-image">Java Image</a> <a href="loose-coupling-in-java">Loose Coupling in Java</a> <a href="java-top-10-libraries">Java Top 10 Libraries</a> <a href="method-hiding-in-java">Method Hiding in Java</a> <a href="java-tuple">Java Tuple</a> <a href="dijkstra-algorithm-java">Dijkstra Algorithm Java</a> <a href="extravagant-number-in-java">Extravagant Number in Java</a> <a href="java-unicode">Java Unicode</a> <a href="new-line-in-java">New Line in Java</a> <a href="return-statement-in-java">Return Statement in Java</a> <a href="order-of-execution-of-constructors-in-java-inheritance">Order of Execution of Constructors in Java Inheritance</a> <a href="cardinal-number-in-java">Cardinal Number in Java</a> <a href="hyperfactorial-in-java">Hyperfactorial in Java</a> <a href="identifier-expected-error-in-java">Identifier Expected Error in Java</a> <a href="java-generate-uuid">Java Generate UUID</a> <a href="labeled-loop-in-java">Labeled Loop in Java</a> <a href="lombok-java">Lombok Java</a> <a href="ordinal-number-in-java">Ordinal Number in Java</a> <a href="tetrahedral-number-in-java">Tetrahedral Number in Java</a> <a href="cosmic-superclass-in-java">Cosmic Superclass in Java</a> <a href="shallow-copy-java">Shallow Copy Java</a> <a href="bifunction-java-8">BiFunction Java 8</a> <a href="equidigital-number-in-java">Equidigital Number in Java</a> <a href="fall-through-in-java">Fall Through in Java</a> <a href="java-reserved-keywords">Java Reserved Keywords</a> <a href="java-vs-go">Java Vs Go</a> <a href="parking-lot-design-java">Parking Lot Design Java</a> <a href="boyer-moore-java">Boyer Moore Java</a> <a href="java-security-framework">Java Security Framework</a> <a href="tetranacci-number-in-java">Tetranacci Number in Java</a> <a href="bfs-algorithm-in-java">BFS Algorithm in Java</a> <a href="countdownlatch-in-java">CountDownLatch in Java</a> <a href="counting-sort-in-java">Counting sort in Java</a> <a href="crc-program-in-java">CRC Program in Java</a> <a href="filenotfoundexception-in-java">FileNotFoundException in Java</a> <a href="inputmismatchexception-in-java">InputMismatchException in Java</a> <a href="java-ascii-table">Java ASCII Table</a> <a href="spark-java">Spark Java</a> <a href="lock-in-java">Lock in Java</a> <a href="segment-tree-in-java">Segment Tree in Java</a> <a href="dto-java">DTO Java</a> <a href="why-main-method-is-always-static-in-java">Why main() method is always static in Java</a> <a href="bellman-ford-algorithm-java">Bellman-Ford Algorithm Java</a> <a href="bigdecimal-tostring-in-java">BigDecimal toString() in Java</a> <a href="dot-net-vs-java">.NET vs Java</a> <a href="java-zipfile">Java ZipFile</a> <a href="lazy-propagation-in-segment-tree-in-java">Lazy Propagation in Segment Tree in Java</a> <a href="magnanimous-number-in-java">Magnanimous Number in Java</a> <a href="binary-tree-java">Binary Tree Java</a> <a href="how-to-create-zip-file-in-java">How to Create Zip File in Java</a> <a href="java-dot-operator">Java Dot Operator</a> <a href="associativity-of-operators-in-java">Associativity of Operators in Java</a> <a href="fenwick-tree-in-java">Fenwick Tree in Java</a> <a href="how-annotation-works-in-java">How annotation works in Java</a> <a href="how-to-find-length-of-integer-in-java">How to Find Length of Integer in Java</a> <a href="java-8-filters">Java 8 filters</a> <a href="list-all-files-in-a-directory-in-java">List All Files in a Directory in Java</a> <a href="tdd-java">TDD Java</a> <a href="how-to-get-day-name-from-date-in-java">How to Get Day Name from Date in Java</a> <a href="zigzag-array-in-java">Zigzag Array in Java</a> <a href="class-definition-in-java">Class Definition in Java</a> <a href="find-saddle-point-of-a-matrix-in-java">Find Saddle Point of a Matrix in Java</a> <a href="non-primitive-data-types-in-java">Non-primitive data types in Java</a> <a href="pancake-number-in-java">Pancake Number in Java</a> <a href="pancake-sorting-in-java">Pancake Sorting in Java</a> <a href="print-matrix-diagonally-in-java">Print Matrix Diagonally in Java</a> <a href="sort-dates-in-java">Sort Dates in Java</a> <a href="carmichael-numbers-in-java">Carmichael Numbers in Java</a> <a href="contextual-keywords-in-java">Contextual Keywords in Java</a> <a href="how-to-open-java-control-panel">How to Open Java Control Panel</a> <a href="how-to-reverse-linked-list-in-java">How to Reverse Linked List in Java</a> <a href="interchange-diagonal-elements-java-program">Interchange Diagonal Elements Java Program</a> <a href="java-set-to-list">Java Set to List</a> <a href="level-order-traversal-of-a-binary-tree-in-java">Level Order Traversal of a Binary Tree in Java</a> <a href="bully-algorithm-in-java">Bully algorithm in Java</a> <a href="convert-json-file-to-string-in-java">Convert JSON File to String in Java</a> <a href="convert-milliseconds-to-date-in-java">Convert Milliseconds to Date in Java</a> <a href="copy-content-data-from-one-file-to-another-in-java">Copy Content/ Data From One File to Another in Java</a> <a href="constructor-vs-method-in-java">Constructor vs Method in Java</a> <a href="access-specifiers-vs-modifiers">Access Specifiers vs Modifiers</a> <a href="java-vs-php">Java vs PHP</a> <a href="replace-vs-replaceall-in-java">replace() vs replaceAll() in Java</a> <a href="this-vs-super-in-java">this vs super in Java</a> <a href="heap-implementation-in-java">Heap implementation in Java</a> <a href="how-to-check-null-in-java">How to Check null in Java</a> <a href="java-arrays-fill">Java Arrays Fill</a> <a href="java-font">Java Font</a> <a href="rotate-matrix-by-90-degrees-in-java">Rotate Matrix by 90 Degrees in Java</a> <a href="exception-class-in-java">Exception Class in Java</a> <a href="transient-variable-in-java">Transient variable in Java</a> <a href="web-crawler-java">Web crawler Java</a> <a href="zigzag-traversal-of-a-binary-tree-in-java">Zigzag Traversal of a Binary Tree in Java</a> <a href="java-get-file-size">Java Get File Size</a> <a href="internal-working-of-arraylist-in-java">Internal Working of ArrayList in Java</a> <a href="java-program-to-print-matrix-in-z-form">Java Program to Print Matrix in Z Form</a> <a href="vertical-order-traversal-of-a-binary-tree-in-java">Vertical Order Traversal of a Binary Tree in Java</a> <a href="group-by-in-java-8">Group By in Java 8</a> <a href="hashing-techniques-in-java">Hashing Techniques in Java</a> <a href="implement-queue-using-array-in-java">Implement Queue Using Array in Java</a> <a href="java-13-features">Java 13 Features</a> <a href="package-program-in-java">Package Program in Java</a> <a href="canonical-name-java">Canonical Name Java</a> <a href="method-chaining-in-java">Method Chaining in Java</a> <a href="orphaned-case-java">Orphaned Case Java</a> <a href="bottom-view-of-a-binary-tree-in-java">Bottom View of a Binary Tree in Java</a> <a href="coercion-in-java">Coercion in Java</a> <a href="dictionary-class-in-java">Dictionary Class in Java</a> <a href="left-view-of-a-binary-tree-in-java">Left View of a Binary Tree in Java</a> <a href="pangram-program-in-java">Pangram Program in Java</a> <a href="top-view-of-a-binary-tree-in-java">Top View of a Binary Tree in Java</a> <a href="tribonacci-series-in-java">Tribonacci Series in Java</a> <a href="hollow-diamond-pattern-in-java">Hollow Diamond Pattern in Java</a> <a href="normal-and-trace-of-a-matrix-in-java">Normal and Trace of a Matrix in Java</a> <a href="right-view-of-a-binary-tree-in-java">Right View of a Binary Tree in Java</a> <a href="dining-philosophers-problem-and-solution-in-java">Dining Philosophers Problem and Solution in Java</a> <a href="shallow-copy-vs-deep-copy-in-java">Shallow Copy vs Deep Copy in Java</a> <a href="java-password-generator">Java Password Generator</a> <a href="java-program-for-shopping-bill">Java Program for Shopping Bill</a> <a href="lock-interface-in-java">Lock Interface in Java</a> <a href="convert-json-to-map-in-java">Convert JSON to Map in Java</a> <a href="convert-json-to-xml-in-java">Convert JSON to XML in Java</a> <a href="middle-node-of-a-linked-list-in-java">Middle Node of a Linked List in Java</a> <a href="pernicious-number-in-java">Pernicious Number in Java</a> <a href="cohesion-in-java">Cohesion in Java</a> <a href="how-to-get-utc-time-in-java">How to get UTC time in Java</a> <a href="jacobsthal-number-in-java">Jacobsthal Number in Java</a> <a href="java-blob">Java BLOB</a> <a href="java-calculate-age">Java Calculate Age</a> <a href="jfc-java">JFC Java</a> <a href="tribonacci-number-java">Tribonacci Number Java</a> <a href="bernoulli-number-in-java">Bernoulli number in Java</a> <a href="cake-number-in-java">Cake Number in Java</a> <a href="compare-time-in-java">Compare time in Java</a> <a href="compare-two-sets-in-java">Compare Two Sets in Java</a> <a href="crown-pattern-in-java">Crown Pattern in Java</a> <a href="convert-list-to-array-in-java">Convert List to Array in Java</a> <a href="aggregation-vs-composition-in-java">Aggregation vs Composition</a> <a href="morris-traversal-for-inorder-in-java">Morris Traversal for Inorder in Java</a> <a href="morris-traversal-for-preorder-in-java">Morris Traversal for Preorder in Java</a> <a href="package-naming-conversion-in-java">Package Naming Conversion in Java</a> <a href="india-map-pattern-in-java">India Map Pattern in Java</a> <a href="ladder-pattern-in-java">Ladder Pattern in Java</a> <a href="orm-tools-in-java">ORM Tools in Java</a> <a href="odious-number-in-java">Odious Number in Java</a> <a href="rat-in-a-maze-problem-in-java">Rat in a Maze Problem in Java</a> <a href="sudoku-in-java">Sudoku in Java</a> <a href="christmas-tree-pattern-in-java">Christmas Tree Pattern in Java</a> <a href="double-hashing-in-java">Double Hashing in Java</a> <a href="magic-square-in-java">Magic Square in Java</a> <a href="possible-paths-from-top-left-to-bottom-right-of-a-matrix-in-java">Possible Paths from Top Left to Bottom Right of a Matrix in Java</a> <a href="palindrome-partitioning-problem-in-java">Palindrome Partitioning Problem in Java</a> <a href="rehashing-in-java">Rehashing in Java</a> <a href="round-robin-scheduling-program-in-java">Round Robin Scheduling Program in Java</a> <a href="types-of-statements-in-java">Types of Statements in Java</a> <a href="compound-assignment-operator-in-java">Compound Assignment Operator in Java</a> <a href="prime-points-in-java">Prime Points in Java</a> <a href="butterfly-pattern-in-java">Butterfly Pattern in Java</a> <a href="fish-pattern-in-java">Fish Pattern in Java</a> <a href="flag-pattern-in-java">Flag Pattern in Java</a> <a href="kite-pattern-in-java">Kite pattern in Java</a> <a href="swastika-pattern-in-java">Swastika Pattern in Java</a> <a href="tug-of-war-in-java">Tug of War in Java</a> <a href="clone-hashmap-in-java">Clone HashMap in Java</a> <a href="fibodiv-number-in-java">Fibodiv Number in Java</a> <a href="heart-pattern-in-java">Heart Pattern in Java</a> <a href="how-to-check-data-type-in-java">How to check data type in Java</a> <a href="java-array-clone">Java Array Clone</a> <a href="use-of-final-keyword-in-java">Use of final Keyword in Java</a> <a href="factorial-of-a-large-number-in-java">Factorial of a Large Number in Java</a> <a href="race-condition-in-java">Race Condition in Java</a> <a href="static-array-in-java">Static Array in Java</a> <a href="water-jug-problem-in-java">Water Jug Problem in Java</a> <a href="electricity-bill-program-in-java">Electricity Bill Program in Java</a> <a href="facts-about-null-in-java">Facts about null in Java</a> <a href="maximizing-profit-in-stock-buy-sell-in-java">Maximizing Profit in Stock Buy Sell in Java</a> <a href="permutation-coefficient-in-java">Permutation Coefficient in Java</a> <a href="convert-list-to-string-in-java">Convert List to String in Java</a> <a href="list-of-constants-in-java">List of Constants in Java</a> <a href="mood-factors-to-assess-a-java-program">MOOD Factors to Assess a Java Program</a> <a href="computing-digit-sum-of-all-numbers-from-1-to-n-in-java">Computing Digit Sum of All Numbers From 1 to n in Java</a> <a href="read-pdf-file-in-java">Read PDF File in Java</a> <a href="finding-odd-occurrence-of-a-number-in-java">Finding Odd Occurrence of a Number in Java</a> <a href="java-indentation">Java Indentation</a> <a href="zig-zag-star-and-number-pattern-in-java">Zig Zag Star and Number Pattern in Java</a> <a href="check-whether-a-number-is-a-power-of-4-or-not-in-java">Check Whether a Number is a Power of 4 or not in Java</a> <a href="kth-smallest-in-an-unsorted-array-in-java">Kth Smallest in an Unsorted Array in Java</a> <a href="blockingqueue-in-java">BlockingQueue in Java</a> <a href="next-greater-element-in-java">Next Greater Element in Java</a> <a href="star-numbers-in-java">Star Numbers in Java</a> <a href="3n-1-problem-in-java">3N+1 Problem in Java</a> <a href="java-program-to-find-local-minima-in-an-array">Java Program to Find Local Minima in An Array</a> <a href="processing-speech-in-java">Processing Speech in Java</a> <a href="java-output-formatting">Java Output Formatting</a> <a href="house-numbers-in-java">House Numbers in Java</a> <a href="java-program-to-generate-binary-numbers">Java Program to Generate Binary Numbers</a> <a href="longest-odd-even-subsequence-in-java">Longest Odd-Even Subsequence in Java</a> <a href="java-subtract-days-from-current-date">Java Subtract Days from Current Date</a> <a href="java-future-example">Java Future Example</a> <a href="minimum-cost-path-problem-in-java">Minimum Cost Path Problem in Java</a> <a href="diffie-hellman-algorithm-in-java">Diffie-Hellman Algorithm in Java</a> <a href="ganeshas-pattern-in-java">Ganesha's Pattern in Java</a> <a href="hamming-code-in-java">Hamming Code in Java</a> <a href="map-of-map-in-java">Map of Map in Java</a> <a href="print-pencil-shape-pattern-in-java">Print Pencil Shape Pattern in Java</a> <a href="zebra-puzzle-in-java">Zebra Puzzle in Java</a> <a href="display-unique-rows-in-a-binary-matrix-in-java">Display Unique Rows in a Binary Matrix in Java</a> <a href="rotate-a-matrix-by-180-degree-in-java">Rotate A Matrix By 180 Degree in Java</a> <a href="dangling-else-problem-in-java">Dangling Else Problem in Java</a> <a href="java-application-vs-java-applet">Java Application vs Java Applet</a> <a href="dutch-national-flag-problem-in-java">Dutch National Flag Problem in Java</a> <a href="java-calculate-average-of-list">Java Calculate Average of List</a> <a href="comparetoignorecase-java">compareToIgnoreCase Java</a> <a href="trimorphic-numbers-in-java">Trimorphic Numbers in Java</a> <a href="arithmetic-exception-in-java">Arithmetic Exception in Java</a> <a href="java-instanceof-operator">Java instanceof operator</a> <a href="java-localization">Java Localization</a> <a href="minimum-xor-value-pair-in-java">Minimum XOR Value Pair in Java</a> <a href="iccanobif-numbers-in-java">Iccanobif Numbers in Java</a> <a href="java-program-to-count-occurrences-of-each-character">Java Program to Count the Occurrences of Each Character</a> <a href="java-technologies-list">Java Technologies List</a> <a href="java-program-to-find-the-minimum-number-of-platforms-required-for-a-railway-station">Java Program to Find the Minimum Number of Platforms Required for a Railway Station</a> <a href="shift-operators-in-java">Shift Operators in Java</a> <a href="final-object-in-java">Final Object in Java</a> <a href="java-ocr">Java OCR</a> <a href="object-definition-in-java">Object Definition in Java</a> <a href="shadowing-in-java">Shadowing in Java</a> <a href="zipping-and-unzipping-files-in-java">Zipping and Unzipping Files in Java</a> <a href="display-the-odd-levels-nodes-of-a-binary-tree-in-java">Display the Odd Levels Nodes of a Binary Tree in Java</a> <a href="java-variable-declaration">Java Variable Declaration</a> <a href="nude-numbers-in-java">Nude Numbers in Java</a> <a href="java-programming-challenges">Java Programming Challenges</a> <a href="java-url-encoder">Java URL Encoder</a> <a href="anymatch-in-java-8">anyMatch() in Java 8</a> <a href="sealed-class-in-java">Sealed Class in Java</a> <a href="camel-case-in-java">Camel case in Java</a> <a href="career-options-for-java-developers-to-aim">Career Options for Java Developers to Aim in 2022</a> <a href="java-progress-bar">Java Progress Bar</a> <a href="maximum-rectangular-area-in-a-histogram-in-java">Maximum Rectangular Area in a Histogram in Java</a> <a href="polygonal-number-in-java">Polygonal Number in Java</a> <a href="two-sorted-linkedlist-intersection-in-java">Two Sorted LinkedList Intersection in Java</a> <a href="set-matrix-zeros-in-java">Set Matrix Zeros in Java</a> <a href="find-number-of-island-in-java">Find Number of Island in Java</a> 
+     </div> 
+     <div class="leftmenu2"> <a href="corejava-interview-questions"><span>Interview Questions</span></a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="java-tutorial">next &#x2192;</a> <a class="next" href="java-tutorial">&#x2190; prev</a> 
+           </div> <h1 class="h1">Java main() method</h1> <p>The main() is the starting point for JVM to start execution of a Java program. Without the main() method, JVM will not execute the program. The syntax of the main() method is:</p> <img src="https://static.javatpoint.com/core/images/java-main-method.png" alt="Java Main Method"> <p><strong>public:</strong> It is an access specifier. We should use a public keyword before the main() method so that JVM can identify the execution point of the program. If we use private, protected, and default before the main() method, it will not be visible to JVM.</p> <p><strong>static:</strong> You can make a method static by using the keyword static. We should call the main() method without creating an object. Static methods are the method which invokes without creating the objects, so we do not need any object to call the main() method.</p> <p><strong>void:</strong> In Java, every method has the return type. Void keyword acknowledges the compiler that main() method does not return any value.</p> <p><strong>main():</strong> It is a default signature which is predefined in the JVM. It is called by JVM to execute a program line by line and end the execution after completion of this method. We can also overload the main() method.</p> <p><strong>String args[]:</strong> The main() method also accepts some data from the user. It accepts a group of strings, which is called a string array. It is used to hold the command line arguments in the form of string values. </p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+main(String args[])
+</textarea>
+           </div> <p>Here, agrs[] is the array name, and it is of String type. It means that it can store a group of string. Remember, this array can also store a group of numbers but in the form of string only. Values passed to the main() method is called arguments. These arguments are stored into args[] array, so the name args[] is generally used for it.</p> <h2 class="h2">What happens if the main() method is written without String args[]?</h2> <p>The program will compile, but not run, because JVM will not recognize the main() method. Remember JVM always looks for the main() method with a string type array as a parameter.</p> <h3 class="h3">Execution Process</h3> <p>First, JVM executes the static block, then it executes static methods, and then it creates the object needed by the program. Finally, it executes the instance methods. JVM executes a static block on the highest priority basis. It means JVM first goes to static block even before it looks for the main() method in the program. </p> <h3 class="h3">Example</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+class  Demo
+{
+static 					//static block
+{
+System.out.println("Static block");
+}
+public static void main(String args[])	//static method
+{
+System.out.println("Static method");
+}
+}
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>Static block
+Static method
+</pre>
+           </div> <p>We observe that JVM first executes the static block, if it is present in the program. After that it searches for the main() method. If the main() method is not found, it gives error.</p> <h3 class="h3">Example </h3> <p>A program that does not have the main() method gives an error at run time.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+class DemoStaticBlock
+{
+Static                                  //static block
+{
+System.out.println("Static block");
+}
+}	
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>Error: Main method not found in the class Demo, please define the main method as:
+public static void main(String[] args)
+or a JavaFX application class must extend javafx.application.Application
+</pre>
+           </div> <p>So the main() method should always be written as:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+public static void main(String args[])
+</textarea>
+           </div> <p>We can interchange public and static and write it as follows:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+static public void main(String args[])
+</textarea>
+           </div> <p>We can also use the different name for the String type array and write it as:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+static public void main(String[] x)
+</textarea>
+           </div> <p>Different ways of writing main() method are:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+static public void main(String []x)
+static public void main(String...args)
+</textarea>
+           </div> <p><strong>String...args:</strong> It allows the method to accept zero or multiple arguments. There should be exactly three dots between String and array; otherwise, it gives an error.</p> <h3 class="h3">Example</h3> <p>A program that has no main() method, but compile and runs successfully.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+abstract class DemoNoMain extends javafx.application.Application
+{
+static 		//static block
+{
+System.out.println("Java");
+System.exit(0);
+}
+}
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>Java
+</pre>
+           </div> <h2 class="h2">Overloading of main() method</h2> <p>We can also overload the main() method. We can define any number of main() method in the class, but the method signature must be different.</p> <h3 class="h3">Example </h3> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+class OverloadMain
+{
+public static void main(int a)	//overloaded main method
+{
+System.out.println(a);
+}
+public static void main(String args[])
+{	
+System.out.println("main method incoked");
+main(6);
+}
+}
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>main method invoked
+6
+</pre>
+           </div> 
+           <hr> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="java-tutorial">Java Tutorial</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:left" class="next" href="java-tutorial">&#x2190; prev</a> <a style="float:right" class="next" href="java-tutorial">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr>
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9cfcccccdcbc8cac2e9c3c8dfc8ddd9c6c0c7dd87cac6c4">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/java-main-method"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/java-main-method"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/java-main-method"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb8399ab818a9d8a9f9b8482859fc5888486">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b63794b616a7d6a7f7b6462657f2568646625">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>
