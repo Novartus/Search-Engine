@@ -1,0 +1,7 @@
+https://compiler.javatpoint.com/opr/test.jsp?filename=Simple
+Compile Java File: Simple - Javatpoint
+Compile Java File: Simple - Javatpoint Online Java Compiler By JavaTpoint.com public class Simple{
+public static void main(String args[]){
+System.out.println("hello javatpoint");
+}}
+ Output

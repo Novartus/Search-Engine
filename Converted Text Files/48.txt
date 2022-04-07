@@ -1,0 +1,95 @@
+https://www.javatpoint.com/java-comments
+Java Comments - Javatpoint
+Java Comments - Javatpoint ? SCROLL TO TOP Home Java Programs OOPs String Exception Multithreading Collections JavaFX JSP Spring Spring Boot Projects Interview Questions Java Training Java Tutorial What is Java History of Java Features of Java C++ vs Java Hello Java Program Program Internal How to set path? JDK, JRE and JVM JVM: Java Virtual Machine Java Variables Java Data Types Unicode System Operators Keywords Control Statements Java Control Statements Java If-else Java Switch Java For Loop Java While Loop Java Do While Loop Java Break Java Continue Java Comments Java Programs Java Object Class Java OOPs Concepts Naming Convention Object and Class Method Constructor static keyword this keyword Java Inheritance Inheritance(IS-A) Aggregation(HAS-A) Java Polymorphism Method Overloading Method Overriding Covariant Return Type super keyword Instance Initializer block final keyword Runtime Polymorphism Dynamic Binding instanceof operator Java Abstraction Abstract class Interface Abstract vs Interface Java Encapsulation Package Access Modifiers Encapsulation Java Array Java Array Java OOPs Misc Object class Object Cloning Math class Wrapper Class Java Recursion Call By Value strictfp keyword javadoc tool Command Line Arg Object vs Class Overloading vs Overriding Java String Java Regex Exception Handling Java Inner classes Java Multithreading Java I/O Java Networking Java AWT & Events Java Swing JavaFX Java Applet Java Reflection Java Date Java Conversion Java Collection Java JDBC Java Misc Java New Features RMI Internationalization Interview Questions Java MCQ next ? ? prev Java Comments The Java comments are the statements in a program that are not executed by the compiler and interpreter. Why do we use comments in a code? Comments are used to make the program more readable by adding the details of the code. It makes easy to maintain the code and to find the errors easily. The comments can be used to provide information or explanation about the variable, method, class, or any statement. It can also be used to prevent the execution of program code while testing the alternative code. Types of Java Comments There are three types of comments in Java. Single Line Comment Multi Line Comment Documentation Comment 1) Java Single Line Comment The single-line comment is used to comment only one line of the code. It is the widely used and easiest way of commenting the statements. Single line comments starts with two forward slashes (//). Any text in front of // is not executed by Java. Syntax: 
+//This is single line comment
+ Let's use single line comment in a Java program. CommentExample1.java 
+public class CommentExample1 {  
+public static void main(String[] args) {  
+int i=10; // i is a variable with value 10
+System.out.println(i);  //printing the variable i
+}  
+}  
+ Output: 10
+ 2) Java Multi Line Comment The multi-line comment is used to comment multiple lines of code. It can be used to explain a complex code snippet or to comment multiple lines of code at a time (as it will be difficult to use single-line comments there). Multi-line comments are placed between /* and */. Any text between /* and */ is not executed by Java. Syntax: 
+/* 
+This  
+is  
+multi line  
+comment 
+*/  
+ Let's use multi-line comment in a Java program. CommentExample2.java 
+public class CommentExample2 {  
+public static void main(String[] args) {  
+/* Let's declare and 
+ print variable in java. */  
+  int i=10;  
+    System.out.println(i);  
+/* float j = 5.9;
+    float k = 4.4;
+    System.out.println( j + k ); */  
+}  
+}  
+ Output: 10
+ Note: Usually // is used for short comments and /* */ is used for longer comments. 3) Java Documentation Comment Documentation comments are usually used to write large programs for a project or software application as it helps to create documentation API. These APIs are needed for reference, i.e., which classes, methods, arguments, etc., are used in the code. To create documentation API, we need to use the javadoc tool. The documentation comments are placed between /** and */. Syntax: 
+/** 
+*
+*We can use various tags to depict the parameter
+*or heading or author name
+*We can also use HTML tags  
+*
+*/  
+ javadoc tags Some of the commonly used tags in documentation comments: Tag Syntax Description {@docRoot} {@docRoot} to depict relative path to root directory of generated document from any page. @author @author name - text To add the author of the class. @code {@code text} To show the text in code font without interpreting it as html markup or nested javadoc tag. @version @version version-text To specify "Version" subheading and version-text when -version option is used. @since @since release To add "Since" heading with since text to generated documentation. @param @param parameter-name description To add a parameter with given name and description to 'Parameters' section. @return @return description Required for every method that returns something (except void) Let's use the Javadoc tag in a Java program. Calculate.java 
+import java.io.*;
+
+/**
+ * <h2> Calculation of numbers </h2>
+ * This program implements an application
+ * to perform operation such as addition of numbers 
+ * and print the result 
+ * <p>
+ * <b>Note:</b> Comments make the code readable and 
+ * easy to understand.
+ * 
+ * @author Anurati 
+ * @version 16.0
+ * @since 2021-07-06
+ */
+ 
+ public class Calculate{
+    /**
+     * This method calculates the summation of two integers.
+     * @param input1 This is the first parameter to sum() method
+     * @param input2 This is the second parameter to the sum() method.
+     * @return int This returns the addition of input1 and input2
+     */
+    public int sum(int input1, int input2){
+        return input1 + input2;
+    }
+    /**
+    * This is the main method uses of sum() method.
+    * @param args Unused
+    * @see IOException 
+    */  
+    public static void main(String[] args) {
+        Calculate obj = new Calculate();
+        int result = obj.sum(40, 20);
+
+        System.out.println("Addition of numbers: " + result);
+    }  
+ } 
+ Compile it by javac tool: Create Document Create documentation API by javadoc tool: Now, the HTML files are created for the Calculate class in the current directory, i.e., abcDemo. Open the HTML files, and we can see the explanation of Calculate class provided through the documentation comment. Are Java comments executable? Ans: As we know, Java comments are not executed by the compiler or interpreter, however, before the lexical transformation of code in compiler, contents of the code are encoded into ASCII in order to make the processing easy. Test.java 
+public class Test{
+	public static void main(String[] args) {
+		//the below comment will be executed
+// \u000d System.out.println("Java comment is executed!!");
+	}
+}
+ Output: The above code generate the output because the compiler parses the Unicode character \u000d as a new line before the lexical transformation, and thus the code is transformed as shown below: Test.java 
+public class Test{
+	public static void main(String[] args) {
+		//the below comment will be executed
+//
+System.out.println("Java comment is executed!!");
+	}
+}
+ Thus, the Unicode character shifts the print statement to next line and it is executed as a normal Java code. Next TopicJava Programs ? prev next ? For Videos Join Our Youtube Channel: Join Now Feedback Send your Feedback to [email protected] Help Others, Please Share Learn Latest Tutorials Splunk SPSS Swagger Transact-SQL Tumblr ReactJS Regex Reinforcement Learning R Programming RxJS React Native Python Design Patterns Python Pillow Python Turtle Keras Preparation Aptitude Reasoning Verbal Ability Interview Questions Company Questions Trending Technologies Artificial Intelligence AWS Selenium Cloud Computing Hadoop ReactJS Data Science Angular 7 Blockchain Git Machine Learning DevOps B.Tech / MCA DBMS Data Structures DAA Operating System Computer Network Compiler Design Computer Organization Discrete Mathematics Ethical Hacking Computer Graphics Software Engineering Web Technology Cyber Security Automata C Programming C++ Java .Net Python Programs Control System Data Mining Data Warehouse Javatpoint Services JavaTpoint offers too many high quality services. Mail us on [email protected], to get more information about given services. Website Designing Website Development Java Development PHP Development WordPress Graphic Designing Logo Digital Marketing On Page and Off Page SEO PPC Content Development Corporate Training Classroom and Online Training Data Entry Training For College Campus JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at [email protected] Duration: 1 week to 2 week Like/Subscribe us for latest updates or newsletter Learn TutorialsLearn JavaLearn Data StructuresLearn C ProgrammingLearn C++ TutorialLearn C# TutorialLearn PHP TutorialLearn HTML TutorialLearn JavaScript TutorialLearn jQuery TutorialLearn Spring Tutorial Our WebsitesJavatpoint.comHindi100.comLyricsia.comQuoteperson.comJobandplacement.com Our Services Website Development Android Development Website Designing Digital Marketing Summer Training Industrial Training College Campus Training Contact Address: G-13, 2nd Floor, Sec-3 Noida, UP, 201301, India Contact No: 0120-4256464, 9990449935Contact Us Subscribe Us Privacy PolicySitemap About Me © Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.
