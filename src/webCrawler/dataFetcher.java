@@ -7,28 +7,7 @@ import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.*;
 
-public class dataFetcher {
-	static ArrayList<String> storeLink = new ArrayList<String>();
-	static ArrayList<String> storageArray = new ArrayList<String>();
-	static ArrayList<String> finalLinkArray = new ArrayList<String>();
-
-	// Maximum 200 URLs will be crawled
-	public static int totalLinks = 200;
-	static String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.112 Safari/535.1";
-
-	// In this function URL will be extracted and added into the list
-	public static void extractURL(String link) throws Exception {
-		try {
-			Document jsoupObj = Jsoup.connect(link).get();
-			Elements linkAttributes = jsoupObj.select("a[href]");
-			String regexURL = "[(http(s)?):\\/\\/(www\\.)?a-zA-Z0-9@:%.\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%\\+.~#?&//=]*)";
-
-			for (int i = 0; i < linkAttributes.size(); i++) {
-				String URL = linkAttributes.get(i).attr("abs:href").toString();
-				if (URL.matches(regexURL)) {
-					storeLink.add(URL);
-				}
-			}
+public class d
 			finalLinkArray.addAll(storeLink);
 			storageArray.addAll(storeLink);
 			storeLink.clear();
