@@ -17,8 +17,7 @@ public class RankingWebPages {
   }
 
   public List<Entry<Integer, Integer>> sortingText(String singleWord) {
-    List<Entry<Integer, Integer>> inpuText =
-      this.sortingHashMap(this.freq.get(singleWord));
+    List<Entry<Integer, Integer>> inpuText = this.sortingHashMap(this.freq.get(singleWord));
     HashMap<Integer, Integer> sorted = new HashMap<Integer, Integer>();
     for (Entry<Integer, Integer> entry : inpuText) sorted.put(
       entry.getKey(),
@@ -31,16 +30,12 @@ public class RankingWebPages {
   public List<Entry<Integer, Integer>> sortingTexts(String[] multipleWords) {
     HashMap<Integer, Integer> wordRank = new HashMap<Integer, Integer>();
     for (String word : multipleWords) {
-      List<Entry<Integer, Integer>> sortedLst =
-        this.sortingText(word.toLowerCase());
+      List<Entry<Integer, Integer>> sortedLst = this.sortingText(word.toLowerCase());
       for (Entry<Integer, Integer> entry : sortedLst) {
-        if (!wordRank.containsKey(entry.getKey())) wordRank.put(
-          entry.getKey(),
-          entry.getValue()
-        ); else wordRank.replace(
-          entry.getKey(),
-          entry.getValue() + wordRank.get(entry.getKey())
-        );
+        if (!wordRank.containsKey(entry.getKey())) 
+        	wordRank.put(entry.getKey(),entry.getValue());
+        else 
+        	wordRank.replace(entry.getKey(), entry.getValue() + wordRank.get(entry.getKey()));
       }
     }
     return this.sortingHashMap(wordRank);
