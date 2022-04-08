@@ -128,9 +128,9 @@ public class invertedIndex {
     List<Entry<Integer, Integer>> results = rank.sortingTexts(words);
     
     System.out.println("Total Search Results: " + results.size());
-    System.out.print("----------------------------------------------------------------- \n");
+    System.out.print("------------------------------------------------------------------ \n");
     System.out.format(sizeForm , "Sr.No.", "File", "Occurrences", "File Title");
-    System.out.print("----------------------------------------------------------------- \n");
+    System.out.print("------------------------------------------------------------------ \n");
 
     HashSet<String> setFile = new HashSet<String>();
 
