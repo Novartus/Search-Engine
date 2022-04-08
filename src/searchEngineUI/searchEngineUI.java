@@ -104,5 +104,9 @@ public class searchEngineUI extends Frame implements ActionListener {
 	public static void executeUI() {
 		new searchEngineUI();
 	}
+	
+	public static void main(String[] args) {
+		executeUI();
+	}
 
 }
