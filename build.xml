@@ -1,0 +1,64 @@
+<project>
+    <property name="src" location="src"/>
+    <property name="build" location="bin"/>
+    <property name="classes.dir" value="${build}/class"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="main-class" value="mainSearchWordEngine.mainSearchWord"/>
+
+    <!-- Classpath for the project-libraries -->
+    <path id="classpath">
+        <fileset dir=".">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+    <!-- Define the classpath which includes the lib.jar and the classes
+    after compiling-->
+
+    <path id="lib.class.path">
+        <pathelement location="${build}"/>
+        <fileset dir=".">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+
+    <target name="clean"
+            description="clean up">
+        <!-- Delete the ${build} and ${dist} directory trees -->
+        <delete dir="${build}"/>
+        <!--        <delete dir="${dist}"/>-->
+    </target>
+
+
+    <target name="compile" description="Compiles the code" depends="clean">
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src}" destdir="${classes.dir}" includeantruntime="false">
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="jar" description="Packages the code into jar" depends="compile">
+        <mkdir dir="${build}/jar"/>
+        <jar destfile="${build}/jar/SearchEngine.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="mainSearchWordEngine.mainSearchWord"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" description="Run the jar file" depends="jar">
+        <java classname="mainSearchWordEngine.mainSearchWord" fork="true">
+            <classpath>
+                <pathelement location="build/jar/SearchEngine.jar"/>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+
+</project>
