@@ -8,4 +8,4 @@
 3) Text processing and Word-Suggestion
 4) URL Patter Finder
 5) Page Ranking Algorithm
-6) Devops:CI
+6) Devops: CI, GitHub Actions, Docker
