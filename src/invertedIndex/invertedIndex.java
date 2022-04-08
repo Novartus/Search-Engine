@@ -1,19 +1,5 @@
 package invertedIndex;
 
-import htmlDataProcessing.removeStopWords;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map.Entry;
 
 public class invertedIndex {
 
@@ -29,7 +15,7 @@ public class invertedIndex {
   }
 
   public void processCleanedTextFiles() throws IOException {
-    int fileKey = 0;
+   
     File[] files = null;
     BufferedReader file = null;
     try {
