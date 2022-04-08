@@ -121,7 +121,8 @@ public class invertedIndex {
     } else {
     	System.out.println("Search results for the word \"" + search +"\"");
     }
-
+    
+    // print the result of occurences to console
     int count = 1;
     List<String> files = new ArrayList<String>();
     List<Entry<Integer, Integer>> results = rank.sortingTexts(words);
@@ -136,12 +137,9 @@ public class invertedIndex {
     for (Entry<Integer, Integer> entry : results) {
       if (count <= 10) {
         String fileName = fileMap.get(entry.getKey());
-        final List<String> lines = Files.readAllLines(
-          Paths.get("Converted Text Files/" + fileName),
-          StandardCharsets.ISO_8859_1
-        );
+        final List<String> lines = Files.readAllLines(Paths.get("Converted Text Files/" + fileName),StandardCharsets.ISO_8859_1);
         if (!setFile.contains(lines.get(1))) {
-           System.out.format(sizeForm, count, fileName, entry.getValue(), lines.get(1));
+          System.out.format(sizeForm, count, fileName, entry.getValue(), lines.get(1));
           files.add(lines.get(0));
           files.add(lines.get(1));
           setFile.add(lines.get(1));
@@ -151,7 +149,6 @@ public class invertedIndex {
         break;
       }
     }
-
     return files;
   }
 
