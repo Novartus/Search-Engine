@@ -1,5 +1,5 @@
 FROM alpine:3.14
-LABEL maintainer="Abhee Hudai"
+LABEL maintainer="Abhee Hudani"
 # Copy all files of project
 COPY . /usr/search_engine
 # Ant Dir Creation
