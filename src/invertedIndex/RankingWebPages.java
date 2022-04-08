@@ -9,6 +9,7 @@ import java.util.Map.Entry;
 
 public class RankingWebPages {
 
+	//It is  HashMap(word ,HashMap(fileKey, occurences))
   public HashMap<String, HashMap<Integer, Integer>> freq;
 
   public RankingWebPages() {
